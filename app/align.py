@@ -1,6 +1,8 @@
 import copy
 import glob
 import json
+import random
+import string
 import traceback
 
 import collatex
@@ -17,6 +19,11 @@ def test_file_writing(object, name, format):
             json.dump(object, output_file)
 
 
+def generateur_id(size=6, chars=string.ascii_uppercase + string.ascii_lowercase + string.digits) -> str:
+    random_string = ''.join(random.choice(chars) for _ in range(size))
+    return random_string
+
+
 class Aligner:
     def __init__(self, filePath: str, main_file: str):
         # On parse chaque fichier
@@ -25,6 +32,7 @@ class Aligner:
         self.main_file = ET.parse(main_file)
         target_files = glob.glob(filePath)
         self.dict_of_parsed_files = {}
+        self.treated_node_names = []
         for file in target_files:
             self.dict_of_parsed_files[file.split("/")[-1].replace(".xml", "")] = ET.parse(file)
 
@@ -52,7 +60,7 @@ class Aligner:
             self.all_nodes[basename] = target_file.xpath("descendant::tei:div[@type='partie']/descendant::node()",
                                                          namespaces=self.ns_decl)
 
-    def structure_tree(self, elements: list, tokens:list, indices: list, context, index_context, query):
+    def structure_tree(self, elements: list, tokens: list, indices: list, context, index_context, query):
         print(indices)
         context_target_nodes = self.output_tree["Mad_A"].xpath(context, namespaces=self.ns_decl)[index_context]
         for index, (min_range, max_range) in enumerate(indices):
@@ -84,7 +92,8 @@ class Aligner:
                 print(len(tokens))
                 following_anchor = tokens[max_range]
                 following_anchor.addprevious(element_to_insert)
-            [self.write_tree(f"/home/mgl/Documents/test/{basename}_{element_name}_intermed.xml", self.output_tree[basename])
+            [self.write_tree(f"/home/mgl/Documents/test/{basename}_{element_name}_intermed.xml",
+                             self.output_tree[basename])
              for basename in self.output_tree.keys()]
 
         print("Starting transformation")
@@ -103,7 +112,8 @@ class Aligner:
 
         current_div = all_divs[0].xpath("@n")[0]
         if len(all_divs) == 1:
-            elements_and_ids = elements_and_ids[min_range: max_range + 1]
+            elements_and_ids = elements_and_ids[min_range: max_range + 2]
+
         for element, identifier in elements_and_ids:
             if element.xpath("name()") != element_name:
                 try:
@@ -112,7 +122,6 @@ class Aligner:
                     p_dict[current_div] = [element]
             else:
                 current_div = element.xpath("@n")[0]
-
 
         # On insère les tei:w dans le paragraphe correspondant de la div correspondante
         print(p_dict.keys())
@@ -126,13 +135,6 @@ class Aligner:
                     div.append(word)
             except KeyError:
                 continue
-        # On supprime les éléments sans parent p:
-        # https://stackoverflow.com/a/7981894
-        # for orphan_node in self.output_tree[key].xpath("descendant::tei:div[@type='partie']/descendant::node()[not("
-        #                                                "ancestor::tei:div[@type='chapitre'])]",
-        #                                                namespaces=self.ns_decl):
-        #     orphan_node.getparent().remove(orphan_node)
-        #     print("Removing orphan")
         print("Done !")
 
     def write_tree(self, path, tree):
@@ -166,11 +168,25 @@ class Aligner:
         print(indices_target)
         print(diffs_target)
 
+    def print_unaligned_sents(self, aligned_table: list):
+        try:
+            wit_a_sent = " ".join([wit_a['t'] if wit_a else "" for wit_a, _ in aligned_table])
+            wit_a_sent = wit_a_sent.replace(" .", ".").replace(" ,", ",")
+            wit_b_sent = " ".join([wit_b['t'] if wit_b else "" for wit_a, wit_b in aligned_table])
+            wit_b_sent = wit_b_sent.replace(" .", ".").replace(" ,", ",")
+            wit_a_ids = " ".join([wit_a['xml:id'] if wit_a else "" for wit_a, _ in aligned_table])
+            wit_b_ids = " ".join([wit_b['xml:id'] if wit_b else "" for _, wit_b in aligned_table])
+            print("Unalined sentences:")
+            print(f"{wit_a_sent}\n{wit_a_ids}\n{wit_b_sent}\n{wit_b_ids}")
+        except Exception:
+            print(traceback.format_exc())
+
     def print_aligned_sents(self, aligned_table: list, index):
         try:
             wit_a_sent = " ".join([wit_a['t'] if wit_a else "" for wit_a, _ in aligned_table[index - 10:index + 10]])
             wit_a_sent = wit_a_sent.replace(" .", ".").replace(" ,", ",")
-            wit_b_sent = " ".join([wit_b['t'] if wit_b else "" for wit_a, wit_b in aligned_table[index - 10:index + 10]])
+            wit_b_sent = " ".join(
+                [wit_b['t'] if wit_b else "" for wit_a, wit_b in aligned_table[index - 10:index + 10]])
             wit_b_sent = wit_b_sent.replace(" .", ".").replace(" ,", ",")
             print("Aligned sentences:")
             print(f"{wit_a_sent}\n{wit_b_sent}")
@@ -179,19 +195,46 @@ class Aligner:
 
     def check_if_match(self, json_table: str, target_id: str) -> (bool, str):
         json_table = json.loads(json_table)
+        with open("/home/mgl/Documents/test/json_table.json", "w") as output_table:
+            json.dump(json_table, output_table)
+        # On produit l'alignement un à un
         aligned_table = list(zip([token[0] if token else None for token in json_table['table'][0]],
                                  [token[0] if token else None for token in json_table['table'][1]]))
         test_file_writing(object=aligned_table, name="aligned.json", format="json")
-        print(target_id)
-        for index, (base_witness, witness_b) in enumerate(aligned_table):
-            if base_witness and witness_b:
+        with open("/home/mgl/Documents/test/json_aligned_table.json", "w") as output_table:
+            json.dump(aligned_table, output_table)
+
+        # Ici on ne va chercher que le pivot, ce qui n'est pas suffisant parfois (cas de la ponctuation). Il
+        # Faudrait trouver une méthode avec plus de contexte.
+        print(f"Searching for {target_id} element")
+        for index, (base_witness, target_witness) in enumerate(aligned_table):
+            if base_witness and target_witness:
+                # Ici il manque le cas où la cible est vide.
                 if base_witness['xml:id'] == target_id:
                     print("Found target")
                     print(base_witness)
-                    print(witness_b)
-                    if base_witness['t'] == witness_b['t']:
+                    print(target_witness)
+                    if base_witness['t'] == target_witness['t']:
                         self.print_aligned_sents(aligned_table=aligned_table, index=index)
-                        return True, witness_b['xml:id']
+                        print(f"Division should start at {target_witness['xml:id']}")
+                        # Ici il faut ajouter une condition sur le noeud suivant: si c'est un tei:pc, on l'inclut.
+                        return True, target_witness['xml:id']
+                    elif aligned_table[index - 1][0]['t'] == aligned_table[index - 1][1]['t']:
+                        self.print_aligned_sents(aligned_table=aligned_table, index=index - 1)
+                        print("Previous token match !")
+                        print(f"Division should start at {target_witness['xml:id']}")
+                        return True, aligned_table[index - 1][1]['xml:id']
+            elif base_witness and not target_witness:
+                # On va chercher plus haut
+                if base_witness['xml:id'] == target_id:
+                    if aligned_table[index - 1][0]['t'] == aligned_table[index - 1][1]['t']:
+                        self.print_aligned_sents(aligned_table=aligned_table, index=index - 1)
+                        print("Previous token match !")
+                        return True, aligned_table[index - 1][1]['xml:id']
+
+        # Si on arrive ici, c'est que quelque chose s'est mal passé.
+        print("Something went wrong.")
+        self.print_unaligned_sents(aligned_table=aligned_table)
 
     def align(self, query, context, proportion):
         print(f"Trying to align on {query} with {context} context.")
@@ -208,42 +251,45 @@ class Aligner:
         # Point faible de cette méthode: ça fonctionne de manière incrémentielle,
         # et si ça bloque quelque part, le processus complet est bloqué.
         # Il faudra probablement recourir à une méthode de text reuse en complément.
-        # TODO: Bien penser à passer à des boucles pour gérer + de deux textes.
+        # TODO: Bien penser à passer à des boucles pour gérer + de deux textes OU recommencer sur un texte nouveau à chaque fois.
         context_source_nodes = self.main_file.xpath(context, namespaces=self.ns_decl)
         context_target_nodes = self.output_tree["Mad_A"].xpath(context, namespaces=self.ns_decl)
-        for index_context, (context_source_node, context_target_node) in enumerate(list(zip(context_source_nodes, context_target_nodes))):
+        for index_context, (context_source_node, context_target_node) in enumerate(
+                list(zip(context_source_nodes, context_target_nodes))):
             structure_source_elements = context_source_node.xpath(query, namespaces=self.ns_decl)
+            unidentified_elements = [element for element in structure_source_elements if len(element.xpath("@n")) == 0]
+            for element in unidentified_elements:
+                element.set("n", generateur_id())
             target_tokens = context_target_node.xpath("descendant::node()[self::tei:w or self::tei:pc]",
-                                                 namespaces=self.ns_decl)
+                                                      namespaces=self.ns_decl)
             target_lemmas = context_target_node.xpath("descendant::node()[self::tei:w or self::tei:pc]/@lemma",
-                                                 namespaces=self.ns_decl)
+                                                      namespaces=self.ns_decl)
             target_ids = context_target_node.xpath("descendant::node()[self::tei:w or self::tei:pc]/@xml:id",
-                                             namespaces=self.ns_decl)
+                                                   namespaces=self.ns_decl)
             target_tokens_ids = list(zip(target_tokens, target_ids))
             current_source_position = 0
             current_target_position = 0
             source_tokens = context_source_node.xpath("descendant::node()[self::tei:w or self::tei:pc]/@lemma",
-                                                 namespaces=self.ns_decl)
+                                                      namespaces=self.ns_decl)
             source_ids = context_source_node.xpath("descendant::node()[self::tei:w or self::tei:pc]/@xml:id",
-                                             namespaces=self.ns_decl)
+                                                   namespaces=self.ns_decl)
             source_tokens_id = list(zip(source_tokens, source_ids))
             target_positions = [0, ]
             for index, division in enumerate(structure_source_elements):
-                first_token_following_div = division.xpath(
+                first_token_current_div = division.xpath(
                     "descendant::node()[self::tei:w or self::tei:pc][last()]/@xml:id", namespaces=self.ns_decl)[0]
-                print(first_token_following_div)
                 source_tokens_per_div = division.xpath("descendant::node()[self::tei:w or self::tei:pc]/@lemma",
                                                        namespaces=self.ns_decl)
                 number_of_tokens_in_div = len(source_tokens_per_div)
                 tokens_fraction = round(number_of_tokens_in_div * proportion)
                 current_source_position += number_of_tokens_in_div
-                source_search_range = [current_source_position - tokens_fraction,
+                source_search_range = [max(0, current_source_position - tokens_fraction),
                                        current_source_position + tokens_fraction]
                 if index == 0:
                     current_target_position = number_of_tokens_in_div
                 else:
                     current_target_position += number_of_tokens_in_div
-                target_search_range = [current_target_position - tokens_fraction,
+                target_search_range = [max(0, current_target_position - tokens_fraction),
                                        current_target_position + tokens_fraction]
                 print(current_target_position)
                 print(f"Source search range: {source_search_range}")
@@ -264,7 +310,7 @@ class Aligner:
                 # print(collation_table)
                 try:
                     match, matching_id = self.check_if_match(json_table=collation_table,
-                                                             target_id=first_token_following_div)
+                                                             target_id=first_token_current_div)
                     print(f"Div {index + 1} aligned.")
                     print(matching_id)
                     current_target_position = \
@@ -272,9 +318,12 @@ class Aligner:
                             0]
                     print(f"Current position: {current_target_position}")
                     target_positions.append(current_target_position)
+                    [self.write_tree(f"/home/mgl/Documents/test/{basename}_empty_node.xml", self.output_tree[basename])
+                     for basename in self.output_tree.keys()]
 
-                except TypeError:
-                    print(first_token_following_div)
+                except Exception:
+                    print(traceback.format_exc())
+                    print(first_token_current_div)
                     print(f"Unable to align div {index + 1}. Exiting.")
                     # collation_table = collatex.collate(collation=collatex_dict, output="csv", segmentation=False)
                     # with open(f"/home/mgl/Documents/tsv_{index + 2}.tsv", "w") as output_file:
@@ -284,29 +333,43 @@ class Aligner:
             target_positions = [(target_positions[index], target_positions[index + 1]) for index, _
                                 in enumerate(target_positions[:len(target_positions) - 1])]
             print(target_positions)
-            self.structure_tree(elements=structure_source_elements, tokens=target_tokens,
+            print("Structuring tree:")
+            try:
+                self.structure_tree(elements=structure_source_elements, tokens=target_tokens,
                                 indices=target_positions, context=context, index_context=index_context, query=query)
+            except Exception:
+                traceback.print_exc()
+                exit(0)
             [self.write_tree(f"/home/mgl/Documents/test/{basename}.xml", self.output_tree[basename])
              for basename in self.output_tree.keys()]
 
 
 if __name__ == '__main__':
     # La requête à effectuer
-    example_query_1 = "//tei:div[@type='chapitre']"
+    example_query_1 = "//tei:div[@type='chapitre'][@n < 5]"
     # Le contexte pour boucler
     context_query_1 = "//tei:div[@type='partie']"
 
-    # La requête à effectuer
-    example_query_2 = "//tei:head"
-    # Le contexte pour boucler
-    context_query_2 = "//tei:div[@type='chapitre']"
-
+    context_query_2 = "//tei:div[@type='chapitre'][@n < 5]"
     example_query_2 = "descendant::tei:head"
+
+    context_query_3 = "//tei:div[@type='chapitre'][@n < 5]"
+    example_query_3 = "descendant::tei:div"
+
+    context_query_4 = "//tei:div[@type='chapitre'][@n < 5]/tei:div"
+    example_query_4 = "descendant::tei:p"
+
     aligner = Aligner(filePath="/home/mgl/Bureau/Travail/projets/alignement/alignement_global_unilingue/data"
                                "/transform/Mad_A.xml",
                       main_file="/home/mgl/Bureau/Travail/projets/alignement/alignement_global_unilingue/data/Source"
                                 "/Sev_Z.xml")
-    aligner.align(query=example_query_1, context=context_query_1,
-                  proportion=.15)
+
+    # aligner = Aligner(filePath="/home/mgl/Documents/test/Mad_A.xml",
+    #                   main_file="/home/mgl/Bureau/Travail/projets/alignement/alignement_global_unilingue/data/Source"
+    #                             "/Sev_Z.xml")
+    aligner.align(query=example_query_1, context=context_query_1, proportion=.15)
     # Le titre est plus variable et plus court, il est donc utile d'augmenter la fenêtre de comparaison à 1 voire 2 fois la taille de la division
-    aligner.align(query=example_query_2, context=context_query_2, proportion=1)
+    aligner.align(query=example_query_2, context=context_query_2, proportion=.5)
+    aligner.align(query=example_query_3, context=context_query_3, proportion=0.5)
+    # aligner.align(query=example_query_4, context=context_query_4, proportion=2)
+    # aligner.align(query=example_query_5, context=context_query_5, proportion=2)
