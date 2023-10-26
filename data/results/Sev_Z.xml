@@ -165,7 +165,7 @@
           
             
               
-              <div type="chapitre" n="1" xml:id="Sal_J_3_3_1"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="jrt8eVm">Capitulo</w>
+              <div type="chapitre" n="1" xml:id="Sev_Z_3_3_1"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="jrt8eVm">Capitulo</w>
               <w xml:id="o8hNjby" lemma="1" pos="AO0MS0">primero</w>
               <pc xml:id="kv1AOVJ" lemma="." pos="Fp">.</pc>
               <w xml:id="dtDhKGI" lemma="en" pos="SPS00">en</w>
@@ -2410,7 +2410,7 @@
           
             
               
-              </div><div xml:id="Sal_J_3_3_2" type="chapitre" n="2"><head n="guzRgRafMw"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="euMDKYk">Capitulo</w>
+              </div><div xml:id="Sev_Z_3_3_2" type="chapitre" n="2"><head n="guzRgRafMw"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="euMDKYk">Capitulo</w>
               <w xml:id="tJRoOxo" lemma="2" pos="AO0MS0">segundo</w>
               <pc xml:id="rG6tiNu" lemma=":" pos="Fd">:</pc>
               <w xml:id="nW5TYHQ" lemma="en" pos="SPS00">en</w>
@@ -3548,13 +3548,13 @@
                 <w xml:id="dzzYrve" lemma="para" pos="SPS00">para</w>
                 <w lemma="el" ana="#annotation_manuelle" xml:id="wn5QTaR" pos="DA0FS0">la</w>
                 <w xml:id="x3yIjvJ" lemma="lid" pos="NCMS000">lid</w>
-                </p><pc xml:id="dyU1Mwe" lemma="." pos="Fp">.</pc>
+                <pc xml:id="dyU1Mwe" lemma="." pos="Fp">.</pc>
               
             
             
               
                 
-                </div><div type="glose"><p n="lGkZMQCwVf"><w xml:id="oahMpF0" lemma="e" pos="CC">E</w>
+                </p></div><div type="glose"><p n="lGkZMQCwVf"><w xml:id="oahMpF0" lemma="e" pos="CC">E</w>
                 <w xml:id="pm79L20" lemma="aqu&#237;" pos="RG">aqui</w>
                 <w xml:id="t6ycryu" lemma="convenir" pos="VMIP3S0">conuiene</w>
                 <w xml:id="yc4FWgs" lemma="de" pos="SPS00">de</w>
@@ -5089,7 +5089,7 @@
           
             
             
-              </p></div></div><div xml:id="Sal_J_3_3_3" type="chapitre" n="3"><head n="flvSiiubxs"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="i3zVnx0">Capitulo</w>
+              </p></div></div><div xml:id="Sev_Z_3_3_3" type="chapitre" n="3"><head n="flvSiiubxs"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="i3zVnx0">Capitulo</w>
               <pc xml:id="s2xAFSp" lemma="." pos="Fp">.</pc>
               <w lemma="3" pos="AO0MS0" ana="#annotation_manuelle" xml:id="fLENJiU">iij</w>
               <pc xml:id="b420uh3" lemma="." pos="Fp">.</pc>
@@ -6856,7 +6856,7 @@
           
             
               
-              </p></div></div><div type="chapitre" n="4" xml:id="Sal_J_3_3_4"><head n="OucihnEJKk"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="xIOtpmq">Capitulo</w>
+              </p></div></div><div type="chapitre" n="4" xml:id="Sev_Z_3_3_4"><head n="OucihnEJKk"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="xIOtpmq">Capitulo</w>
               <w xml:id="p71G8M4" lemma="4" pos="AO0MS0">quarto</w>
               <pc xml:id="jCqBdFC" lemma=":" pos="Fd">:</pc>
               <w xml:id="qxRpLoN" lemma="en" pos="SPS00">en</w>
@@ -8844,7 +8844,7 @@
           
             
               
-              </p></div></div><div type="chapitre" n="5" xml:id="Sal_J_3_3_5"><head n="pAHUAuWPBz"><w xml:id="nh60y7B" lemma="cap&#237;tulo" pos="NCMS000">capitulo</w>
+              </p></div></div><div type="chapitre" n="5" xml:id="Sev_Z_3_3_5"><head n="pAHUAuWPBz"><w xml:id="nh60y7B" lemma="cap&#237;tulo" pos="NCMS000">capitulo</w>
               <w xml:id="qWQnFBr" lemma="quinto" pos="AO0MS0">quinto</w>
               <pc xml:id="zjL8SE1" lemma=":" pos="Fd">:</pc>
               <w lemma="do" pos="RG" ana="#annotation_manuelle" xml:id="goatvKD">do</w>
@@ -10347,7 +10347,7 @@
           
             
               
-              </p></div></div><div type="chapitre" n="6" xml:id="Sal_J_3_3_6"><head n="AaBUXBKmPt"><w xml:id="ejQkPen" lemma="cap&#237;tulo" pos="NCMS000">capitulo</w>
+              </p></div></div><div type="chapitre" n="6" xml:id="Sev_Z_3_3_6"><head n="AaBUXBKmPt"><w xml:id="ejQkPen" lemma="cap&#237;tulo" pos="NCMS000">capitulo</w>
               <w xml:id="vTwank9" lemma="sexto" pos="AO0MS0">sexto</w>
               <pc xml:id="hUwlYYw" lemma=":" pos="Fd">:</pc>
               <w xml:id="s7rQiO5" lemma="donde" pos="PR000000">do</w>
@@ -12745,7 +12745,7 @@
           
             
               
-              </p></div></div><div type="chapitre" n="7" xml:id="Sal_J_3_3_7"><head n="hPQrHvlfIV"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="lvYrrC3">capitulo</w>
+              </p></div></div><div type="chapitre" n="7" xml:id="Sev_Z_3_3_7"><head n="hPQrHvlfIV"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="lvYrrC3">capitulo</w>
               <pc xml:id="my41XAb" lemma="." pos="Fp">.</pc>
               <pc xml:id="pyGYltZ" lemma="." pos="Fp">.</pc>
               <w lemma="7" ana="#annotation_manuelle" xml:id="mHjA7hH" pos="Z">vij</w>
@@ -14476,7 +14476,7 @@
           
             
               
-              </p></div></div><div xml:id="Sal_J_3_3_8" type="chapitre" n="8"><head n="EIfATTZuhp"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="pLK3DtF">Cap&#237;tulo</w>
+              </p></div></div><div xml:id="Sev_Z_3_3_8" type="chapitre" n="8"><head n="EIfATTZuhp"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="pLK3DtF">Cap&#237;tulo</w>
               <pc xml:id="aGRGsmq" lemma="." pos="Fp">.</pc>
               <w lemma="8" ana="#annotation_manuelle" xml:id="stFludU" pos="Z">viij</w>
               <pc xml:id="gFNieNu" lemma="." pos="Fp">.</pc>
@@ -16576,7 +16576,7 @@
           
             
               
-              </div></div><div type="chapitre" xml:id="Sal_J_3_3_9" n="9"><head n="aPtIUvCUOv"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="soStLCA">Capitulo</w>
+              </div></div><div type="chapitre" xml:id="Sev_Z_3_3_9" n="9"><head n="aPtIUvCUOv"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="soStLCA">Capitulo</w>
               <pc xml:id="hNqROq1" lemma="." pos="Fp">.</pc>
               <w lemma="9" ana="#annotation_manuelle" xml:id="sz34RZz" pos="Z">ix</w>
               <pc xml:id="lmpJPFl" lemma="." pos="Fp">.</pc>
@@ -18240,7 +18240,7 @@
           
             
               
-              </p></div></div><div xml:id="Sal_J_3_3_10" type="chapitre" n="10"><head n="MSwxAcIOfQ"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="mpYGZFu">Capitulo</w>
+              </p></div></div><div xml:id="Sev_Z_3_3_10" type="chapitre" n="10"><head n="MSwxAcIOfQ"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="mpYGZFu">Capitulo</w>
               <pc xml:id="sRML7KW" lemma="." pos="Fp">.</pc>
               <w lemma="10" ana="#annotation_manuelle" xml:id="nQNlMv9" pos="Z">x</w>
               <pc xml:id="jYmQfYl" lemma="." pos="Fp">.</pc>
@@ -19612,7 +19612,7 @@
           
             
               
-              </p></div></div><div type="chapitre" xml:id="Sal_J_3_3_11" n="11"><head n="QyJBKYErlD"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="lb6dCgv">Capitulo</w>
+              </p></div></div><div type="chapitre" xml:id="Sev_Z_3_3_11" n="11"><head n="QyJBKYErlD"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="lb6dCgv">Capitulo</w>
               <pc xml:id="yQcnH0t" lemma="." pos="Fp">.</pc>
               <w lemma="11" ana="#annotation_manuelle" xml:id="imcDEy8" pos="Z">xj</w>
               <pc xml:id="n7VlIi4" lemma="." pos="Fp">.</pc>
@@ -21413,7 +21413,7 @@
           
             
               
-              </p></div></div><div type="chapitre" n="12" xml:id="Sal_J_3_3_12"><head n="txpBzzINgV"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="nY4Pa1e">Capitulo</w>
+              </p></div></div><div type="chapitre" n="12" xml:id="Sev_Z_3_3_12"><head n="txpBzzINgV"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="nY4Pa1e">Capitulo</w>
               <w lemma="12" ana="#annotation_manuelle" xml:id="owdkOar" pos="AQ0MS0">duodecimo</w>
               <pc xml:id="k2I1ad8" lemma=":" pos="Fd">:</pc>
               <w xml:id="vpPY5bO" lemma="donde" pos="PR000000">do</w>
@@ -23089,7 +23089,7 @@
           
             
               
-              </p></div></div><div type="chapitre" xml:id="Sal_J_3_3_13" n="13"><head n="XnASmRqzYJ"><w xml:id="ehKVq3L" lemma="cap&#237;tulo" pos="NCMS000">capitulo</w>
+              </p></div></div><div type="chapitre" xml:id="Sev_Z_3_3_13" n="13"><head n="XnASmRqzYJ"><w xml:id="ehKVq3L" lemma="cap&#237;tulo" pos="NCMS000">capitulo</w>
               <w xml:id="arxgvNz" lemma="decimotercio" pos="NCMS000">decimotercio</w>
               <pc xml:id="u3mEvY9" lemma=":" pos="Fd">:</pc>
               <w lemma="do" pos="RG" ana="#annotation_manuelle" xml:id="xbjENiE">do</w>
@@ -24400,7 +24400,7 @@
           
             
               
-              </p></div></div><div type="chapitre" n="14" xml:id="Sal_J_3_3_14"><head n="EaJqHSQqCS"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="ckTdsv1">Capitulo</w>
+              </p></div></div><div type="chapitre" n="14" xml:id="Sev_Z_3_3_14"><head n="EaJqHSQqCS"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="ckTdsv1">Capitulo</w>
               <pc xml:id="cy6Z4Oa" lemma="." pos="Fp">.</pc>
               <w lemma="14" ana="#annotation_manuelle" xml:id="qsUrOPE" pos="Z">xiiij</w>
               <pc xml:id="hLatnmn" lemma="." pos="Fp">.</pc>
@@ -26042,7 +26042,7 @@
           
             
               
-              </p></div></div><div type="chapitre" n="15" xml:id="Sal_J_3_3_15"><head n="EdiCUswDrU"><w xml:id="km5Fk8d" lemma="cap&#237;tulo" pos="NCMS000">capitulo</w>
+              </p></div></div><div type="chapitre" n="15" xml:id="Sev_Z_3_3_15"><head n="EdiCUswDrU"><w xml:id="km5Fk8d" lemma="cap&#237;tulo" pos="NCMS000">capitulo</w>
               <w xml:id="jCXA8MI" lemma="15" pos="AO0MS0">decimoquinto</w>
               <pc xml:id="t62ZlfF" lemma=":" pos="Fd">:</pc>
               <w xml:id="vg6zreA" lemma="donde" pos="PR000000">do</w>
@@ -27735,7 +27735,7 @@
           
             
               
-              </p></div></div><div type="chapitre" n="16" xml:id="Sal_J_3_3_16"><head n="kCttPyxnos"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="sB1SC88">Capitulo</w>
+              </p></div></div><div type="chapitre" n="16" xml:id="Sev_Z_3_3_16"><head n="kCttPyxnos"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="sB1SC88">Capitulo</w>
               <pc xml:id="fKmQSZ2" lemma="." pos="Fp">.</pc>
               <w lemma="16" ana="#annotation_manuelle" xml:id="pMfxxTY" pos="Z">xvj</w>
               <pc xml:id="gobPFhE" lemma="." pos="Fp">.</pc>
@@ -29072,7 +29072,7 @@
           
             
               
-              </p></div></div><div type="chapitre" n="17" xml:id="Sal_J_3_3_17"><head n="fVGLxVfOMQ"><w ana="#annotation_manuelle" xml:id="qi8LGHW" lemma="cap&#237;tulo" pos="NCMS000">Capitulo</w>
+              </p></div></div><div type="chapitre" n="17" xml:id="Sev_Z_3_3_17"><head n="fVGLxVfOMQ"><w ana="#annotation_manuelle" xml:id="qi8LGHW" lemma="cap&#237;tulo" pos="NCMS000">Capitulo</w>
               <pc xml:id="cGO8Lie" lemma="." pos="Fp">.</pc>
               <w lemma="17" ana="#annotation_manuelle" xml:id="keLiho5" pos="Z">xvij</w>
               <pc xml:id="sDLzX6d" lemma="." pos="Fp">.</pc>
@@ -31352,7 +31352,7 @@
           
             
               
-              </p></div></div><div type="chapitre" n="18" xml:id="Sal_J_3_3_18"><head n="IBnqEanuMG"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="rhXv6Ci">Capitulo</w>
+              </p></div></div><div type="chapitre" n="18" xml:id="Sev_Z_3_3_18"><head n="IBnqEanuMG"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="rhXv6Ci">Capitulo</w>
               <pc xml:id="iUaoeyP" lemma="." pos="Fp">.</pc>
               <w lemma="18" ana="#annotation_manuelle" xml:id="tKIz5QO" pos="Z">xviij</w>
               <pc xml:id="ajG7941" lemma="." pos="Fp">.</pc>
@@ -33139,7 +33139,7 @@
           
             
               
-              </p></div></div><div type="chapitre" n="19" xml:id="Sal_J_3_3_19"><head n="EMbrVFbLRf"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="rxO2LaE">Capitulo</w>
+              </p></div></div><div type="chapitre" n="19" xml:id="Sev_Z_3_3_19"><head n="EMbrVFbLRf"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="rxO2LaE">Capitulo</w>
               <w xml:id="cTgB7Db" lemma="10" pos="Z">diez</w>
               <w xml:id="ekL4cUS" lemma="e" pos="CC">e</w>
               <w xml:id="rt8DJvm" lemma="9" pos="Z">nueue</w>
@@ -35460,7 +35460,7 @@
           
             
               
-              </p></div></div><div type="chapitre" n="20" xml:id="Sal_J_3_3_20"><head n="PpAjyHZeMs"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="ujK6BSM">Capitulo</w>
+              </p></div></div><div type="chapitre" n="20" xml:id="Sev_Z_3_3_20"><head n="PpAjyHZeMs"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="ujK6BSM">Capitulo</w>
               <w xml:id="n22QJEI" lemma="veinte" pos="AQ0MS0">veynte</w>
               <pc xml:id="pdfvOaS" lemma=":" pos="Fd">:</pc>
               <w xml:id="pu9wPQV" lemma="en" pos="SPS00">en</w>
@@ -35988,7 +35988,7 @@
               
               
                 
-                </p><w lemma="lo" pos="DA0NS0" ana="#annotation_manuelle" xml:id="nR4Tn3V">Lo</w>
+                </p><p n="yaHDjvzgez"><w lemma="lo" pos="DA0NS0" ana="#annotation_manuelle" xml:id="nR4Tn3V">Lo</w>
                 <w lemma="5" pos="NCMS000" ana="#annotation_manuelle" xml:id="rFrHlbY">quinto</w>
                 <w lemma="deber" pos="VMIP3P0" ana="#annotation_manuelle" xml:id="mHn5NNL">deuen</w>
                 <w xml:id="jOIGfHW" lemma="tener" pos="VMN0000">tener</w>
@@ -36050,7 +36050,7 @@
             
               
                 
-                </div><div type="glose"><p n="ByQRCmCIdn"><w lemma="mas" pos="CC" ana="#annotation_manuelle" xml:id="dmONd1f">Mas</w>
+                </p></div><div type="glose"><p n="ByQRCmCIdn"><w lemma="mas" pos="CC" ana="#annotation_manuelle" xml:id="dmONd1f">Mas</w>
                 <w xml:id="eAsg1Jm" lemma="aqu&#237;" pos="RG">aqui</w>
                 <w xml:id="h2ojre0" lemma="convenir" pos="VMIP3S0">conuiene</w>
                 <w xml:id="pR9biq1" lemma="de" pos="SPS00">de</w>
@@ -37661,7 +37661,7 @@
               
               
                 
-                </p><w lemma="mas" pos="CC" ana="#annotation_manuelle" xml:id="wSy0JyT">Mas</w>
+                </p><p n="FzRbHUZwQs"><w lemma="mas" pos="CC" ana="#annotation_manuelle" xml:id="wSy0JyT">Mas</w>
                 <w xml:id="i680Pty" lemma="aqu&#237;" pos="RG">aqui</w>
                 <w xml:id="kyWLaw4" lemma="poder" pos="VMIP1P0">podemos</w>
                 <w xml:id="zCQ9rd3" lemma="notar" pos="VMN0000">notar</w>
@@ -37945,7 +37945,7 @@
                 <w xml:id="oiNMa1s" lemma="todo" pos="DI0FS0">toda</w>
                 <w xml:id="dKL3xSF" lemma="asia" pos="NP000G0">asia</w>
                 <pc xml:id="w6OuvbP" lemma="." pos="Fp">.</pc>
-                <w xml:id="kXSCrp0" lemma="e" pos="CC">E</w>
+                </p><w xml:id="kXSCrp0" lemma="e" pos="CC">E</w>
                 <w lemma="do" pos="RG" ana="#annotation_manuelle" xml:id="e9VbWr6">do</w>
                 <w xml:id="gOzZa4d" lemma="este" pos="PD0NS000">esto</w>
                 <w xml:id="t82cjsE" lemma="ver" pos="VMIS3S0">vio</w>
@@ -38275,7 +38275,7 @@
           
             
               
-              </div></div><div type="chapitre" n="21" xml:id="Sal_J_3_3_21"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="shy5X1V">Capitulo</w>
+              </div></div><div type="chapitre" n="21" xml:id="Sev_Z_3_3_21"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="shy5X1V">Capitulo</w>
               <w lemma="21" pos="Z" ana="#annotation_manuelle" xml:id="zbA8TVr">.xxj.</w>
               <w xml:id="vvOEs1q" lemma="de" pos="SPS00">de</w>
               <w xml:id="qUrDEAB" lemma="el" pos="DA0FS0">la</w>
@@ -38974,7 +38974,7 @@
           
             
               
-              </div><div type="chapitre" n="22" xml:id="Sal_J_3_3_22"><head n="jNlfVjcpJs"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="gYiS4Eg">Capitulo</w>
+              </div><div type="chapitre" n="22" xml:id="Sev_Z_3_3_22"><head n="jNlfVjcpJs"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="gYiS4Eg">Capitulo</w>
               <pc xml:id="d5bqu8l" lemma="." pos="Fp">.</pc>
               <w xml:id="lupnnbH" lemma="22" pos="Z">xxij</w>
               <pc xml:id="ue3uDKL" lemma="." pos="Fp">.</pc>
@@ -42129,7 +42129,7 @@
           
             
               
-              </p></div></div><div type="chapitre" n="23" xml:id="Sal_J_3_3_23"><head n="gkzXEITkHR"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="cprajSX">Capitulo</w>
+              </p></div></div><div type="chapitre" n="23" xml:id="Sev_Z_3_3_23"><head n="gkzXEITkHR"><w lemma="cap&#237;tulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="cprajSX">Capitulo</w>
               <pc xml:id="dydxcJP" lemma="." pos="Fp">.</pc>
               <w xml:id="xIkvVdG" lemma="23" pos="Z">xxiij</w>
               <pc xml:id="pvYXwxi" lemma="." pos="Fp">.</pc>

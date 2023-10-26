@@ -10,27 +10,44 @@
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="G" facs="https://rbdigital.realbiblioteca.es/s/realbiblioteca/item/11555">Ms. II/215 de la
-                  Biblioteca Real <origDate>xve~siècle</origDate><msDesc><msIdentifier xml:lang="es"><country>Espagne</country><settlement>Madrid</settlement><repository>Biblioteca Real</repository><idno>ms. II/215</idno><msName>G</msName></msIdentifier><msContents><p><title>Regimiento</title> complet.</p></msContents><physDesc><objectDesc form="codex"><supportDesc><support>Support en <material type="papier">papier</material>.</support><extent><!--<note>Selon Garretas, format original : 300*215mm</note>--><measure quantity="454" unit="folios">1 + II + 454 + 12 + III'+ I'</measure><dimensions scope="all" type="leaf" unit="cm"><height>27.5</height><width>21.0</width></dimensions><dimensions scope="column" type="leaf" unit="cm"><height>21.0</height><width>6.7</width></dimensions></extent><foliation ana="#folioté" xml:id="aaU95AG"/><collation>Description des cahiers</collation><condition>Selon Díez Garretas <date>2003</date>, le manuscrit devait mesurer avant ré-reliure
-                                 275x210mm. </condition></supportDesc><layoutDesc><layout columns="2"><p>Deux colonnes, entre 32 et 40 lignes.</p></layout></layoutDesc></objectDesc><handDesc><ab xml:id="cQslE9b"/></handDesc><decoDesc><p xml:id="wsCOX0l"/></decoDesc><bindingDesc><binding><condition xml:id="lhKScgm"/></binding></bindingDesc></physDesc><history><origin>Proviendrait de la Bibliothèque du Comte de Gondomar. Ex libris royal de l'époque de Carlos
-                           IV-Fernando VII.</origin></history></msDesc></witness>
+          <witness xml:id="G" facs="https://rbdigital.realbiblioteca.es/s/realbiblioteca/item/11555">Ms. II/215 de la Biblioteca
+            Real <origDate>xve~siècle</origDate><msDesc><msIdentifier xml:lang="es"
+                  ><country>Espagne</country><settlement>Madrid</settlement><repository>Biblioteca Real</repository><idno>ms.
+                  II/215</idno><msName>G</msName></msIdentifier><msContents><p><title>Regimiento</title>
+                  complet.</p></msContents><physDesc><objectDesc form="codex"><supportDesc><support>Support en <material
+                        type="papier"
+                        >papier</material>.</support><extent><!--<note>Selon Garretas, format original : 300*215mm</note>--><measure
+                        quantity="454" unit="folios">1 + II + 454 + 12 + III'+ I'</measure><dimensions scope="all" type="leaf"
+                        unit="cm"><height>27.5</height><width>21.0</width></dimensions><dimensions scope="column" type="leaf"
+                        unit="cm"><height>21.0</height><width>6.7</width></dimensions></extent><foliation ana="#folioté"
+                      xml:id="aaU95AG"/><collation>Description des cahiers</collation><condition>Selon Díez Garretas
+                        <date>2003</date>, le manuscrit devait mesurer avant ré-reliure 275x210mm.
+                      </condition></supportDesc><layoutDesc><layout columns="2"><p>Deux colonnes, entre 32 et 40
+                      lignes.</p></layout></layoutDesc></objectDesc><handDesc><ab xml:id="cQslE9b"/></handDesc><decoDesc><p
+                    xml:id="wsCOX0l"/></decoDesc><bindingDesc><binding><condition xml:id="lhKScgm"
+                /></binding></bindingDesc></physDesc><history><origin>Proviendrait de la Bibliothèque du Comte de Gondomar. Ex
+                  libris royal de l'époque de Carlos IV-Fernando VII.</origin></history></msDesc></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="paragraph" matchPattern="(\w+).(\w+).(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3']/tei:div[@type='$4']/tei:p[@n='$5'])">
+        <cRefPattern n="paragraph" matchPattern="(\w+).(\w+).(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3']/tei:div[@type='$4']/tei:p[@n='$5'])">
           <p>This pointer pattern extracts book and part and and translation or gloss or traduction and paragraph</p>
           <!--Ajouter la hiérarchie glose vs traduction-->
         </cRefPattern>
-        <cRefPattern n="glose_ou_traduction" matchPattern="(\w+).(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3']/tei:div[@type='$4'])">
+        <cRefPattern n="glose_ou_traduction" matchPattern="(\w+).(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3']/tei:div[@type='$4'])">
           <p>This pointer pattern extracts book and part and and translation or gloss or traduction</p>
           <!--Ajouter la hiérarchie glose vs traduction-->
         </cRefPattern>
-        <cRefPattern n="chapter" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])">
+        <cRefPattern n="chapter" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])">
           <p>This pointer pattern extracts book and part and chapter</p>
         </cRefPattern>
-        <cRefPattern n="part" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2'])">
+        <cRefPattern n="part" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2'])">
           <p>This pointer pattern extracts book and part</p>
         </cRefPattern>
         <cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
@@ -9344,7 +9361,175 @@
             <div type="traduction">
               <p n="aivbiGOyJx" xml:id="thi6YNL"/>
               <p n="BPlazTBoKs" xml:id="qEqCfWX"/>
-              <p n="gnPRxGrfip"><w xml:id="yvHU26n" lemma="todo" pos="DI0MP0">Todos</w><w xml:id="wBXjgsc" lemma="el" pos="DA0MP0">los</w><w xml:id="rbwyPcp" lemma="lidiador" pos="NCMP000">lidiadores</w><w lemma="deber" pos="VMIP3P0" ana="#annotation_manuelle" xml:id="fWnbYwp">deven</w><w xml:id="delS5lc" lemma="ser" pos="VSN0000">ser</w><w xml:id="atTc3gs" lemma="usar" pos="VMPS0PM">usados</w><w xml:id="gWYGmGn" lemma="e" pos="CC">e</w><w xml:id="vqPzn4a" lemma="acostumbrar" pos="VMPS0PM">acostunbrados</w><w xml:id="iWcRJlU" lemma="a" pos="SPS00">a</w><w xml:id="vP9DAmw" lemma="este" pos="DD0FP0">estas</w><w xml:id="bthcbTN" lemma="3" pos="Z">tres</w><w xml:id="lgY0zgV" lemma="cosa" pos="NCFP000">cosas</w><w xml:id="u0wXVVY" lemma="que" pos="PR0CN000">que</w><w xml:id="qLzvyx8" lemma="aquí" pos="RG">aquí</w><w xml:id="faVM5QA" lemma="poner" pos="VMIP3S0">pone</w><pc xml:id="jUS0Rav" lemma="." pos="Fp">.</pc><w xml:id="jLCEwzW" lemma="el" pos="DA0FS0">La</w><w lemma="1" pos="AO0FS0" ana="#annotation_manuelle" xml:id="xWrJzz6">primera</w><w xml:id="npUem7s" lemma="ser" pos="VSIP3S0">es</w><w xml:id="km0CtJm" lemma="que" pos="CS">que</w><w xml:id="aLlgbQO" lemma="andar" pos="VMSP3P0">anden</w><w xml:id="kY7OjAV" lemma="muy" pos="RG">muy</w><w xml:id="uR69ww8" lemma="ordenar" pos="VMPS0PM">ordenados</w><w xml:id="nUCcB8R" lemma="en" pos="SPS00">en</w><w xml:id="lFc79Ae" lemma="el" pos="DA0FS0">la</w><w lemma="haz" pos="NCFS000" ana="#annotation_manuelle" xml:id="wvbprsv">haz</w><w xml:id="sUAQItT" lemma="e" pos="CC">e</w><w xml:id="k4MExdw" lemma="en" pos="SPS00">en</w><w xml:id="g3Pf0DK" lemma="el" pos="DA0FS0">la</w><w lemma="facienda" ana="#annotation_manuelle" xml:id="dZfSTZS" pos="NCFS000">fazienda</w><pc xml:id="gPiWmov" lemma="," pos="Fc">,</pc><w xml:id="dxQk4kE" lemma="así" pos="RG">asý</w><w xml:id="svnEj1z" lemma="que" pos="CS">que</w><w lemma="cada" ana="#annotation_manuelle" xml:id="rxAxMzs" pos="DI0CS0">cada</w><w xml:id="ilYGWik" lemma="uno" pos="PI0MS000">uno</w><w lemma="se" pos="PP3CN000" ana="#annotation_manuelle" xml:id="hxCwifI">se</w><w lemma="tener" pos="VMSP3S0" ana="#annotation_manuelle" xml:id="w7TutPP">tenga</w><w xml:id="eG6J1H0" lemma="en" pos="SPS00">en</w><w xml:id="yo2yhYu" lemma="su" pos="DP3CS0">su</w><w xml:id="qIazc1l" lemma="orden" pos="NCFS000">orden</w><w xml:id="tc268Pt" lemma="e" pos="CC">e</w><w lemma="se" pos="PP3CN000" ana="#annotation_manuelle" xml:id="sPuqlyz">se</w><w xml:id="hjNzMqN" lemma="mover" pos="VMSP3S0">mueva</w><w xml:id="sbRddZR" lemma="en" pos="SPS00">en</w><w xml:id="ylq5JtC" lemma="su" pos="DP3CS0">su</w><w xml:id="lUD9yBz" lemma="grado" pos="NCMS000">grado</w><w xml:id="kQTtrMM" lemma="e" pos="CC">e</w><w xml:id="cJRcKkN" lemma="en" pos="SPS00">en</w><w xml:id="elrzKp4" lemma="su" pos="DP3CS0">su</w><w lemma="paso" pos="NCMS000" ana="#annotation_manuelle" xml:id="iVhNvs8">paso</w><w lemma="siquiera" pos="RG" ana="#annotation_manuelle" xml:id="dbuyxod">siquier</w><w ana="#annotation_manuelle" xml:id="pyMn21X" lemma="caballero" pos="NCMS000">cavallero</w><pc xml:id="lrdBvvM" lemma="." pos="Fp">.</pc><w xml:id="pmOJ8NB" lemma="ca" pos="CS">Ca</w><w lemma="si" pos="CS" ana="#annotation_manuelle" xml:id="fOb4pfA">si</w><w lemma="el" pos="DA0MS0" ana="#annotation_manuelle" xml:id="hPScB6I">el</w><w lemma="haz" pos="NCFS000" ana="#annotation_manuelle" xml:id="otQiQuj">haz</w><w xml:id="rdoIZsL" lemma="de" pos="SPS00">de</w><w xml:id="o02vUtU" lemma="el" pos="DA0MP0">los</w><w xml:id="oKzm8Gj" lemma="peón" pos="NCMP000">peones</w><w xml:id="iYS4hL6" lemma="e" pos="CC">e</w><w xml:id="q5b9O60" lemma="de" pos="SPS00">de</w><w xml:id="rPGIB7F" lemma="el" pos="DA0MP0">los</w><w lemma="caballero" pos="NCMP000" ana="#annotation_manuelle" xml:id="fR2wNhd">cavalleros</w><w xml:id="axIK3i3" lemma="no" pos="RN">non</w><w lemma="ser" pos="VSSI3S0" ana="#annotation_manuelle" xml:id="tbqRsbw">fuese</w><w xml:id="fumYUdR" lemma="bien" pos="RG">bien</w><w xml:id="okqNLok" lemma="ordenar" pos="VMPS0SF">ordenada</w><pc xml:id="vxbhLzS" lemma="," pos="Fc">,</pc><w xml:id="dyuxwIx" lemma="2" pos="Z">dos</w><w xml:id="bASbs5f" lemma="mal" pos="NCMP000">males</w><w lemma="se" pos="PP3CN000" ana="#annotation_manuelle" xml:id="nLdcUYf">se</w><w lemma="seguir" ana="#annotation_manuelle" xml:id="o5fYfxe" pos="VMIC3P0">seguirían</w><w xml:id="bIHBnGw" lemma="dende" pos="RG">dende</w><pc xml:id="uPygVhd" lemma="." pos="Fp">.</pc><w xml:id="zt2aGK1" lemma="el" pos="DA0MS0">El</w><w xml:id="oAWhIb6" lemma="uno" pos="PI0MS000">uno</w><pc xml:id="d0oSjet" lemma="," pos="Fc">,</pc><w xml:id="ygFpp5s" lemma="que" pos="CS">que</w><w xml:id="gs8pJZN" lemma="en" pos="SPS00">en</w><w xml:id="mIxKqLC" lemma="el" pos="DA0FS0">la</w><w lemma="1" pos="AO0FS0" ana="#annotation_manuelle" xml:id="t2kBYGH">una</w><w pos="NCFS000" ana="#annotation_manuelle" xml:id="yRS8eBL" lemma="parte">parte</w><w xml:id="cKNAC4G" lemma="el" pos="DA0FS0">la</w><w lemma="haz" pos="NCFS000" ana="#annotation_manuelle" xml:id="roktzkI">haz</w><w lemma="ralo" ana="#annotation_manuelle" xml:id="xLtnMGV" pos="AQ0FS0">rala</w><w xml:id="bBYm0wR" lemma="ser" pos="VSIC1S0">sería</w><pc xml:id="h6aLCNR" lemma="." pos="Fp">.</pc><w xml:id="mWchWfZ" lemma="et" pos="CC">Et</w><w xml:id="kTgV4X1" lemma="así" pos="RG">así</w><w lemma="se" pos="PP3CN000" ana="#annotation_manuelle" xml:id="ggc5qjE">se</w><w xml:id="f1BJ3eO" lemma="poder" pos="VMIC3S0">podría</w><w lemma="más" pos="RG" ana="#annotation_manuelle" xml:id="an1wB4g">más</w><w xml:id="wYy0hER" lemma="aína" pos="RG">ayna</w><w xml:id="xOi6c7u" lemma="partir" pos="VMN0000">partir</w><pc xml:id="uNRLQ0q" lemma="," pos="Fc">,</pc><w xml:id="fxbwOCW" lemma="et" pos="CC">et</w><w xml:id="mVzAro7" lemma="horadar" pos="VMN0000">foradar</w><w xml:id="tgcOJry" lemma="de" pos="SPS00">de</w><w xml:id="uxAvmRB" lemma="el" pos="DA0MP0">los</w><w xml:id="yrVoTqf" lemma="enemigo" pos="NCMP000">enemigos</w><pc xml:id="fcp0JCV" lemma=":" pos="Fd">:</pc><w xml:id="guWxX0N" lemma="e" pos="CC">e</w><w xml:id="w46uJys" lemma="por" pos="SPS00">por</w><w lemma="ý" pos="RG" ana="#annotation_manuelle" xml:id="qBpwhzY">ý</w><w lemma="se" pos="PP3CN000" ana="#annotation_manuelle" xml:id="dwu0vnY">se</w><w xml:id="eLOny2O" lemma="poder" pos="VMIC3S0">podría</w><w xml:id="sGCMsX9" lemma="vencer" pos="VMN0000">vençer</w><w xml:id="aekLDyy" lemma="el" pos="DA0FS0">la</w><w lemma="facienda" ana="#annotation_manuelle" xml:id="nYZi0EC" pos="NCFS000">fazienda</w><pc xml:id="mXQPn8b" lemma="." pos="Fp">.</pc><w xml:id="a5dnAeE" lemma="el" pos="DA0MS0">El</w><w lemma="2" pos="AO0MS0" ana="#annotation_manuelle" xml:id="cuYMOca">ii°</w><w xml:id="zUjJvcQ" lemma="mal" pos="AQ0CS0">mal</w><w xml:id="gaEmP7D" lemma="ser" pos="VSIP3S0">es</w><w xml:id="j4o3Mgv" lemma="que" pos="CS">que</w><w xml:id="vjZQPfH" lemma="en" pos="SPS00">en</w><w xml:id="rCZQ7o2" lemma="el" pos="DA0FS0">la</w><w xml:id="hXPHgCI" lemma="otro" pos="DI0FS0">otra</w><w pos="NCFS000" ana="#annotation_manuelle" xml:id="hXS0lF7" lemma="parte">parte</w><pc xml:id="qTHITqw" lemma="," pos="Fc">,</pc><w xml:id="iEzJwKJ" lemma="ser" pos="VSIC1S0">sería</w><w xml:id="e6ZsA7Z" lemma="estrecho" pos="AQ0FS0">estrecha</w><w xml:id="a7oG8pd" lemma="e" pos="CC">e</w><w xml:id="rih93xc" lemma="apretar" pos="VMPS0SF">apretada</w><pc xml:id="xuUv050" lemma="." pos="Fp">.</pc><w xml:id="xBDUDIQ" lemma="et" pos="CC">Et</w><w xml:id="wgTu2Yb" lemma="así" pos="RG">así</w><w xml:id="cgGTYeO" lemma="ellos" pos="PP3MP000">ellos</w><w lemma="mismo" pos="AQ0MP0" ana="#annotation_manuelle" xml:id="ud7fdfc">mesmos</w><w lemma="se" pos="PP3CN000" ana="#annotation_manuelle" xml:id="njkw1If">se</w><w lemma="embargar" ana="#annotation_manuelle" xml:id="oamrtyQ" pos="VMIC3P0">enbargarían</w><w xml:id="stPiXEW" lemma="el" pos="DA0MP0">los</w><w xml:id="i5rnn9R" lemma="uno" pos="PI0MP000">unos</w><w xml:id="htIjoBa" lemma="a" pos="SPS00">a</w><w xml:id="iiSPjx5" lemma="el" pos="DA0MP0">los</w><w xml:id="dhozxeJ" lemma="otro" pos="PI0MP000">otros</w><pc xml:id="tb6mFK0" lemma="," pos="Fc">,</pc><w xml:id="x36JmFl" lemma="que" pos="CS">que</w><w xml:id="gb6dRsC" lemma="no" pos="RN">non</w><w xml:id="pQQrmoy" lemma="poder" pos="VMIC3P0">podrían</w><w lemma="ferir" ana="#annotation_manuelle" xml:id="jwg5LME" pos="VMN0000">ferir</w><w xml:id="oKrUnE0" lemma="a" pos="SPS00">a</w><w xml:id="aZC4cNZ" lemma="el" pos="DA0MP0">los</w><w xml:id="w6miWIN" lemma="enemigo" pos="NCMP000">enemigos</w><pc xml:id="xEKPsD4" lemma="." pos="Fp">.</pc><w xml:id="ierQWgX" lemma="et" pos="CC">Et</w><w xml:id="jh3PsB0" lemma="por" pos="SPS00">por</w><w xml:id="czo0NNX" lemma="ende" pos="RG">ende</w><pc xml:id="mbNaEzf" lemma="," pos="Fc">,</pc><w xml:id="xqNr7Y3" lemma="este" pos="DD0FP0">estas</w><w xml:id="sncMClK" lemma="2" pos="Z">dos</w><w xml:id="g1FIwZ0" lemma="cosa" pos="NCFP000">cosas</w><w xml:id="mTOKnIF" lemma="ser" pos="VSIP3P0">son</w><w xml:id="iTn7Jo1" lemma="menester" pos="NCMS000">menester</w><w xml:id="zgy3Bof" lemma="en" pos="SPS00">en</w><w xml:id="h2o67rm" lemma="el" pos="DA0FS0">la</w><w lemma="haz" pos="NCFS000" ana="#annotation_manuelle" xml:id="qHDQh5U">haz</w><pc xml:id="zgQOXdT" lemma="," pos="Fc">,</pc><w lemma="lo" ana="#annotation_manuelle" xml:id="nb7Ye1e" pos="DA0NS0">lo</w><w xml:id="bFEFS8K" lemma="uno" pos="PI0MS000">uno</w><w xml:id="bQwcUin" lemma="que" pos="PR0CN000">que</w><w xml:id="lkMQVn2" lemma="no" pos="RN">non</w><w lemma="se" pos="PP3CN000" ana="#annotation_manuelle" xml:id="mhkXjJJ">se</w><w lemma="poder" pos="VMSP3S0" ana="#annotation_manuelle" xml:id="ytX6gwu">pueda</w><w xml:id="pBGpYDV" lemma="horadar" pos="VMN0000">foradar</w><w xml:id="ugbCWVJ" lemma="de" pos="SPS00">de</w><w xml:id="frhaHCY" lemma="el" pos="DA0MP0">los</w><w xml:id="vlifLAC" lemma="enemigo" pos="NCMP000">enemigos</w><pc xml:id="tMmKhyU" lemma="," pos="Fc">,</pc><w xml:id="vzyMTBC" lemma="e" pos="CC">e</w><w lemma="lo" ana="#annotation_manuelle" xml:id="xEwU48X" pos="DA0NS0">lo</w><w xml:id="lg7IiPe" lemma="otro" pos="PI0MS000">otro</w><w xml:id="hnKLDuc" lemma="que" pos="PR0CN000">que</w><w xml:id="eDUOrek" lemma="no" pos="RN">non</w><w lemma="se" pos="PP3CN000" ana="#annotation_manuelle" xml:id="wpb4nqT">se</w><w lemma="embargar" ana="#annotation_manuelle" xml:id="aAMNzD1" pos="VMSP3P0">enbarguen</w><w xml:id="nLbOMrf" lemma="en" pos="SPS00">en</w><w lemma="el" pos="DA0MS0" ana="#annotation_manuelle" xml:id="eH2KzDz">el</w><w lemma="ferir" ana="#annotation_manuelle" xml:id="irXZCKM" pos="VMN0000">ferir</w><pc xml:id="mUAngaF" lemma=";" pos="Fx">;</pc><w xml:id="eoqfEGo" lemma="el" pos="DA0FP0">las</w><w xml:id="nRokVOM" lemma="cuál" pos="PT0CP000">quales</w><w xml:id="uVhWpiB" lemma="cosa" pos="NCFP000">cosas</w><w xml:id="awnTqMP" lemma="no" pos="RN">non</w><w lemma="se" pos="PP3CN000" ana="#annotation_manuelle" xml:id="uxNCzEc">se</w><w xml:id="pg3EdTr" lemma="poder" pos="VMIP3P0">pueden</w><w xml:id="i8ymV8b" lemma="bien" pos="RG">bien</w><w xml:id="i226NXC" lemma="guardar" pos="VMN0000">guardar</w><w lemma="si" pos="CS" ana="#annotation_manuelle" xml:id="nOfpOi0">sy</w><w xml:id="qgbuj0U" lemma="no" pos="RN">non</w><w xml:id="cAgwLyI" lemma="ser" pos="VSSF3P0">fueren</w><w xml:id="xxUNWaA" lemma="bien" pos="RG">bien</w><w xml:id="wwMbgMC" lemma="ordenado" pos="AQ0MP0">ordenados</w><w xml:id="gR47jrs" lemma="el" pos="DA0MP0">los</w><w xml:id="mKiIP4l" lemma="lidiador" pos="NCMP000">lidiadores</w><pc xml:id="tnWRIwh" lemma="," pos="Fc">,</pc><w xml:id="d7qqwn7" lemma="e" pos="CC">e</w><w xml:id="erOJEoN" lemma="poner" pos="VMPS0PM">puestos</w><w lemma="cada" ana="#annotation_manuelle" xml:id="btm4vmd" pos="DI0CS0">cada</w><w xml:id="kXCfoIH" lemma="uno" pos="PI0MS000">uno</w><w xml:id="mS9F0Vs" lemma="en" pos="SPS00">en</w><w xml:id="ofVlLgg" lemma="su" pos="DP3CS0">su</w><w xml:id="iY8Qay6" lemma="orden" pos="NCFS000">orden</w><pc xml:id="mvT6FvN" lemma="." pos="Fp">.</pc><w xml:id="iUHLQp3" lemma="por" pos="SPS00">Por</w><w xml:id="dB2eBrv" lemma="ende" pos="RG">ende</w><pc xml:id="r1CcQbQ" lemma="," pos="Fc">,</pc><w xml:id="gwIelOp" lemma="ser" pos="VSIP3P0">son</w><w xml:id="eJo7p9m" lemma="mucho" pos="DI0FP0">muchas</w><w xml:id="oZj8Kwi" lemma="vez" pos="NCFP000">vezes</w><w xml:id="nOXtZeS" lemma="de" pos="SPS00">de</w><w xml:id="rLg5Jw5" lemma="traer" pos="VMN0000">traer</w><w xml:id="sANT6VM" lemma="a" pos="SPS00">a</w><w xml:id="b8WhIkT" lemma="el" pos="DA0MP0">los</w><w xml:id="g96JHEI" lemma="campo" pos="NCMP000">canpos</w><pc xml:id="ijQ0gta" lemma="," pos="Fc">,</pc><w xml:id="mmFFovK" lemma="también" pos="RG">tanbién</w><w xml:id="gA9JBcj" lemma="el" pos="DA0MP0">los</w><w xml:id="pi12rxi" lemma="peón" pos="NCMP000">peones</w><w ana="#annotation_manuelle" xml:id="zt8Q9jr" lemma="como" pos="CS">como</w><w xml:id="oxCPz2j" lemma="el" pos="DA0MP0">los</w><w lemma="caballero" pos="NCMP000" ana="#annotation_manuelle" xml:id="toTvUHt">cavalleros</w><pc xml:id="e2qhhWF" lemma="," pos="Fc">,</pc><w lemma="antes" pos="RG" ana="#annotation_manuelle" xml:id="fCdNu0a">ante</w><w xml:id="oIdKhZe" lemma="que" pos="CS">que</w><w lemma="venir" pos="VMSP3P0" ana="#annotation_manuelle" xml:id="sHqDDha">vengan</w><w xml:id="nO8HhJq" lemma="a" pos="SPS00">a</w><w xml:id="dNCYcEz" lemma="el" pos="DA0FP0">las</w><w lemma="facienda" ana="#annotation_manuelle" xml:id="dI9ybwE" pos="NCFP000">faziendas</w><pc xml:id="oVkRQkU" lemma="." pos="Fp">.</pc><w xml:id="cTcbkOX" lemma="et" pos="CC">Et</w><w xml:id="jJGJgwm" lemma="allí" pos="RG">allí</w><w xml:id="sG5OnGf" lemma="ser" pos="VSIP3P0">son</w><w xml:id="fOEPVCp" lemma="de" pos="SPS00">de</w><w xml:id="h688bBL" lemma="ayuntar" pos="VMN0000">ayuntar</w><w xml:id="vGG1gfL" lemma="e" pos="CC">e</w><w xml:id="eeSH5jX" lemma="de" pos="SPS00">de</w><w xml:id="oIWIFBh" lemma="usar" pos="VMN0000">usar</w><w xml:id="eCw3GOg" lemma="el" pos="DA0FP0">las</w><w xml:id="j9KtPjE" lemma="arma" pos="NCFP000">armas</w><pc xml:id="i60N1pS" lemma="," pos="Fc">,</pc><w xml:id="nDPBxnU" lemma="e" pos="CC">e</w><w ana="#annotation_manuelle" xml:id="bHdQJGj" lemma="de" pos="SPS00">de</w><w lemma="como" pos="PR000000" ana="#annotation_manuelle" xml:id="qh3k7EV">commo</w> vayan ordenadamente<pc xml:id="v97qVaq" lemma="ir" pos="VMSP3P0">,</pc><w xml:id="vvpYWsd" lemma="así" pos="RG">así</w><w lemma="como" pos="PR000000" ana="#annotation_manuelle" xml:id="qAZr2jY">commo</w><w lemma="si" pos="CS" ana="#annotation_manuelle" xml:id="pYMKjL4">si</w><w xml:id="clMzs7f" lemma="haber" pos="VMSI3P0">oviesen</w><w xml:id="zmmpRqG" lemma="de" pos="SPS00">de</w><w xml:id="tPemyLz" lemma="lidiar" pos="VMN0000">lidiar</w><pc xml:id="cHcFix9" lemma="," pos="Fc">,</pc><w xml:id="uewFT1w" lemma="e" pos="CC">e</w><w xml:id="whgVq3w" lemma="ser" pos="VSIP3P0">son</w><w xml:id="oUh6QU4" lemma="de" pos="SPS00">de</w><w xml:id="qrJavq6" lemma="enseñar" pos="VMN0000">enseñar</w><w xml:id="huarmaZ" lemma="por" pos="SPS00">por</w><w xml:id="ft8qHWf" lemma="el" pos="DA0MP0">los</w><w xml:id="w17jECq" lemma="caudillo" pos="NCMP000">cabdillos</w><w xml:id="ybT3PMt" lemma="que" pos="PR0CN000">que</w><w lemma="cada" ana="#annotation_manuelle" xml:id="d7bAI7I" pos="DI0CS0">cada</w><w xml:id="cW6Y1Y7" lemma="uno" pos="PI0MS000">uno</w><w lemma="tener" pos="VMSP3S0" ana="#annotation_manuelle" xml:id="bbB5fRt">tenga</w><w xml:id="hLFZriL" lemma="su" pos="DP3CS0">su</w><w xml:id="w53UfZS" lemma="orden" pos="NCFS000">orden</w><w xml:id="nRRo4AA" lemma="en" pos="SPS00">en</w><w xml:id="gmn5SSI" lemma="el" pos="DA0FS0">la</w><w lemma="haz" pos="NCFS000" ana="#annotation_manuelle" xml:id="zVnX77C">haz</w><pc xml:id="vu0cDOb" lemma="." pos="Fp">.</pc><w xml:id="iJTJITA" lemma="et" pos="CC">Et</w><w lemma="si" pos="CS" ana="#annotation_manuelle" xml:id="oypJnAQ">si</w><w xml:id="xWlYCV2" lemma="lo" pos="PP3FSA00">la</w><w xml:id="cE58YtO" lemma="no" pos="RN">non</w><w xml:id="wTQSLI6" lemma="tener" pos="VMSF1S0">toviere</w><pc xml:id="qR6cPdb" lemma="," pos="Fc">,</pc><w xml:id="u2N4YN4" lemma="denostar+le" pos="VMSP3P0+PP3CSD00">denuéstenle</w><w xml:id="jytXxvY" lemma="e" pos="CC">e</w><w xml:id="z8nyYc0" lemma="castigar+le" pos="VMSP3P0+PP3CSD00">castíguenle</w><w xml:id="oL0PZ95" lemma="por" pos="SPS00">por</w><w xml:id="cAQGUQ3" lemma="ello" pos="PP3NS000">ello</w><pc xml:id="eNyXfsU" lemma="." pos="Fp">.</pc><w xml:id="pFaGFvX" lemma="e" pos="CC">E</w><w lemma="si" pos="CS" ana="#annotation_manuelle" xml:id="rQPlPb3">si</w><w xml:id="hm1KnzB" lemma="tan" pos="RG">tan</w><w xml:id="vl5p1Fu" lemma="malo" pos="NCMS000">malo</w><w xml:id="q0WKeuK" lemma="ser" pos="VSSF1S0">fuere</w><w xml:id="ufbmFmt" lemma="que" pos="PR0CN000">que</w><w xml:id="klYNMwV" lemma="no" pos="RN">non</w><w xml:id="dXpJBtZ" lemma="guardar" pos="VMSF1S0">guardare</w><w xml:id="oRl2sTw" lemma="orden" pos="NCFS000">orden</w><w xml:id="rRBEBNw" lemma="en" pos="SPS00">en</w><w xml:id="hWN3sBA" lemma="el" pos="DA0FS0">la</w><w lemma="haz" pos="NCFS000" ana="#annotation_manuelle" xml:id="yAjPQwJ">haz</w><pc xml:id="k4qC72Z" lemma="," pos="Fc">,</pc><w xml:id="nKnMYiK" lemma="echar+lo" pos="VMSP3P0+PP3CNa00">échenlo</w><w xml:id="nWkTcSm" lemma="de" pos="SPS00">de</w><w xml:id="ujT8hId" lemma="el" pos="DA0FS0">la</w><w lemma="facienda" ana="#annotation_manuelle" xml:id="wAeoXi6" pos="NCFS000">fazienda</w><pc xml:id="wkZaV2r" lemma="," pos="Fc">,</pc><w xml:id="qOuiKzy" lemma="así" pos="RG">así</w><w lemma="como" pos="CS" ana="#annotation_manuelle" xml:id="m4RliHy">commo</w><w xml:id="zC3I3Md" lemma="aquel" pos="PD0MS000">aquel</w><w xml:id="t7XzaKy" lemma="que" pos="PR0CN000">que</w><w xml:id="jx5LKeC" lemma="no" pos="RN">non</w><w xml:id="jJYNAZN" lemma="ser" pos="VSIP3S0">es</w><w xml:id="wx7PSTC" lemma="para" pos="SPS00">para</w><w xml:id="sCWQmjW" lemma="él" pos="PP3FS000">ella</w><pc xml:id="wSeIXsJ" lemma="." pos="Fp">.</pc></p>
+              <p n="gnPRxGrfip"><w xml:id="yvHU26n" lemma="todo" pos="DI0MP0">Todos</w><w xml:id="wBXjgsc" lemma="el" pos="DA0MP0"
+                  >los</w><w xml:id="rbwyPcp" lemma="lidiador" pos="NCMP000">lidiadores</w><w lemma="deber" pos="VMIP3P0"
+                  ana="#annotation_manuelle" xml:id="fWnbYwp">deven</w><w xml:id="delS5lc" lemma="ser" pos="VSN0000">ser</w><w
+                  xml:id="atTc3gs" lemma="usar" pos="VMPS0PM">usados</w><w xml:id="gWYGmGn" lemma="e" pos="CC">e</w><w
+                  xml:id="vqPzn4a" lemma="acostumbrar" pos="VMPS0PM">acostunbrados</w><w xml:id="iWcRJlU" lemma="a" pos="SPS00"
+                  >a</w><w xml:id="vP9DAmw" lemma="este" pos="DD0FP0">estas</w><w xml:id="bthcbTN" lemma="3" pos="Z">tres</w><w
+                  xml:id="lgY0zgV" lemma="cosa" pos="NCFP000">cosas</w><w xml:id="u0wXVVY" lemma="que" pos="PR0CN000">que</w><w
+                  xml:id="qLzvyx8" lemma="aquí" pos="RG">aquí</w><w xml:id="faVM5QA" lemma="poner" pos="VMIP3S0">pone</w><pc
+                  xml:id="jUS0Rav" lemma="." pos="Fp">.</pc><w xml:id="jLCEwzW" lemma="el" pos="DA0FS0">La</w><w lemma="1"
+                  pos="AO0FS0" ana="#annotation_manuelle" xml:id="xWrJzz6">primera</w><w xml:id="npUem7s" lemma="ser"
+                  pos="VSIP3S0">es</w><w xml:id="km0CtJm" lemma="que" pos="CS">que</w><w xml:id="aLlgbQO" lemma="andar"
+                  pos="VMSP3P0">anden</w><w xml:id="kY7OjAV" lemma="muy" pos="RG">muy</w><w xml:id="uR69ww8" lemma="ordenar"
+                  pos="VMPS0PM">ordenados</w><w xml:id="nUCcB8R" lemma="en" pos="SPS00">en</w><w xml:id="lFc79Ae" lemma="el"
+                  pos="DA0FS0">la</w><w lemma="haz" pos="NCFS000" ana="#annotation_manuelle" xml:id="wvbprsv">haz</w><w
+                  xml:id="sUAQItT" lemma="e" pos="CC">e</w><w xml:id="k4MExdw" lemma="en" pos="SPS00">en</w><w xml:id="g3Pf0DK"
+                  lemma="el" pos="DA0FS0">la</w><w lemma="facienda" ana="#annotation_manuelle" xml:id="dZfSTZS" pos="NCFS000"
+                  >fazienda</w><pc xml:id="gPiWmov" lemma="," pos="Fc">,</pc><w xml:id="dxQk4kE" lemma="así" pos="RG">asý</w><w
+                  xml:id="svnEj1z" lemma="que" pos="CS">que</w><w lemma="cada" ana="#annotation_manuelle" xml:id="rxAxMzs"
+                  pos="DI0CS0">cada</w><w xml:id="ilYGWik" lemma="uno" pos="PI0MS000">uno</w><w lemma="se" pos="PP3CN000"
+                  ana="#annotation_manuelle" xml:id="hxCwifI">se</w><w lemma="tener" pos="VMSP3S0" ana="#annotation_manuelle"
+                  xml:id="w7TutPP">tenga</w><w xml:id="eG6J1H0" lemma="en" pos="SPS00">en</w><w xml:id="yo2yhYu" lemma="su"
+                  pos="DP3CS0">su</w><w xml:id="qIazc1l" lemma="orden" pos="NCFS000">orden</w><w xml:id="tc268Pt" lemma="e"
+                  pos="CC">e</w><w lemma="se" pos="PP3CN000" ana="#annotation_manuelle" xml:id="sPuqlyz">se</w><w xml:id="hjNzMqN"
+                  lemma="mover" pos="VMSP3S0">mueva</w><w xml:id="sbRddZR" lemma="en" pos="SPS00">en</w><w xml:id="ylq5JtC"
+                  lemma="su" pos="DP3CS0">su</w><w xml:id="lUD9yBz" lemma="grado" pos="NCMS000">grado</w><w xml:id="kQTtrMM"
+                  lemma="e" pos="CC">e</w><w xml:id="cJRcKkN" lemma="en" pos="SPS00">en</w><w xml:id="elrzKp4" lemma="su"
+                  pos="DP3CS0">su</w><w lemma="paso" pos="NCMS000" ana="#annotation_manuelle" xml:id="iVhNvs8">paso</w><w
+                  lemma="siquiera" pos="RG" ana="#annotation_manuelle" xml:id="dbuyxod">siquier</w><w ana="#annotation_manuelle"
+                  xml:id="pyMn21X" lemma="caballero" pos="NCMS000">cavallero</w><pc xml:id="lrdBvvM" lemma="." pos="Fp">.</pc><w
+                  xml:id="pmOJ8NB" lemma="ca" pos="CS">Ca</w><w lemma="si" pos="CS" ana="#annotation_manuelle" xml:id="fOb4pfA"
+                  >si</w><w lemma="el" pos="DA0MS0" ana="#annotation_manuelle" xml:id="hPScB6I">el</w><w lemma="haz" pos="NCFS000"
+                  ana="#annotation_manuelle" xml:id="otQiQuj">haz</w><w xml:id="rdoIZsL" lemma="de" pos="SPS00">de</w><w
+                  xml:id="o02vUtU" lemma="el" pos="DA0MP0">los</w><w xml:id="oKzm8Gj" lemma="peón" pos="NCMP000">peones</w><w
+                  xml:id="iYS4hL6" lemma="e" pos="CC">e</w><w xml:id="q5b9O60" lemma="de" pos="SPS00">de</w><w xml:id="rPGIB7F"
+                  lemma="el" pos="DA0MP0">los</w><w lemma="caballero" pos="NCMP000" ana="#annotation_manuelle" xml:id="fR2wNhd"
+                  >cavalleros</w><w xml:id="axIK3i3" lemma="no" pos="RN">non</w><w lemma="ser" pos="VSSI3S0"
+                  ana="#annotation_manuelle" xml:id="tbqRsbw">fuese</w><w xml:id="fumYUdR" lemma="bien" pos="RG">bien</w><w
+                  xml:id="okqNLok" lemma="ordenar" pos="VMPS0SF">ordenada</w><pc xml:id="vxbhLzS" lemma="," pos="Fc">,</pc><w
+                  xml:id="dyuxwIx" lemma="2" pos="Z">dos</w><w xml:id="bASbs5f" lemma="mal" pos="NCMP000">males</w><w lemma="se"
+                  pos="PP3CN000" ana="#annotation_manuelle" xml:id="nLdcUYf">se</w><w lemma="seguir" ana="#annotation_manuelle"
+                  xml:id="o5fYfxe" pos="VMIC3P0">seguirían</w><w xml:id="bIHBnGw" lemma="dende" pos="RG">dende</w><pc
+                  xml:id="uPygVhd" lemma="." pos="Fp">.</pc><w xml:id="zt2aGK1" lemma="el" pos="DA0MS0">El</w><w xml:id="oAWhIb6"
+                  lemma="uno" pos="PI0MS000">uno</w><pc xml:id="d0oSjet" lemma="," pos="Fc">,</pc><w xml:id="ygFpp5s" lemma="que"
+                  pos="CS">que</w><w xml:id="gs8pJZN" lemma="en" pos="SPS00">en</w><w xml:id="mIxKqLC" lemma="el" pos="DA0FS0"
+                  >la</w><w lemma="1" pos="AO0FS0" ana="#annotation_manuelle" xml:id="t2kBYGH">una</w><w pos="NCFS000"
+                  ana="#annotation_manuelle" xml:id="yRS8eBL" lemma="parte">parte</w><w xml:id="cKNAC4G" lemma="el" pos="DA0FS0"
+                  >la</w><w lemma="haz" pos="NCFS000" ana="#annotation_manuelle" xml:id="roktzkI">haz</w><w lemma="ralo"
+                  ana="#annotation_manuelle" xml:id="xLtnMGV" pos="AQ0FS0">rala</w><w xml:id="bBYm0wR" lemma="ser" pos="VSIC1S0"
+                  >sería</w><pc xml:id="h6aLCNR" lemma="." pos="Fp">.</pc><w xml:id="mWchWfZ" lemma="et" pos="CC">Et</w><w
+                  xml:id="kTgV4X1" lemma="así" pos="RG">así</w><w lemma="se" pos="PP3CN000" ana="#annotation_manuelle"
+                  xml:id="ggc5qjE">se</w><w xml:id="f1BJ3eO" lemma="poder" pos="VMIC3S0">podría</w><w lemma="más" pos="RG"
+                  ana="#annotation_manuelle" xml:id="an1wB4g">más</w><w xml:id="wYy0hER" lemma="aína" pos="RG">ayna</w><w
+                  xml:id="xOi6c7u" lemma="partir" pos="VMN0000">partir</w><pc xml:id="uNRLQ0q" lemma="," pos="Fc">,</pc><w
+                  xml:id="fxbwOCW" lemma="et" pos="CC">et</w><w xml:id="mVzAro7" lemma="horadar" pos="VMN0000">foradar</w><w
+                  xml:id="tgcOJry" lemma="de" pos="SPS00">de</w><w xml:id="uxAvmRB" lemma="el" pos="DA0MP0">los</w><w
+                  xml:id="yrVoTqf" lemma="enemigo" pos="NCMP000">enemigos</w><pc xml:id="fcp0JCV" lemma=":" pos="Fd">:</pc><w
+                  xml:id="guWxX0N" lemma="e" pos="CC">e</w><w xml:id="w46uJys" lemma="por" pos="SPS00">por</w><w lemma="ý"
+                  pos="RG" ana="#annotation_manuelle" xml:id="qBpwhzY">ý</w><w lemma="se" pos="PP3CN000"
+                  ana="#annotation_manuelle" xml:id="dwu0vnY">se</w><w xml:id="eLOny2O" lemma="poder" pos="VMIC3S0">podría</w><w
+                  xml:id="sGCMsX9" lemma="vencer" pos="VMN0000">vençer</w><w xml:id="aekLDyy" lemma="el" pos="DA0FS0">la</w><w
+                  lemma="facienda" ana="#annotation_manuelle" xml:id="nYZi0EC" pos="NCFS000">fazienda</w><pc xml:id="mXQPn8b"
+                  lemma="." pos="Fp">.</pc><w xml:id="a5dnAeE" lemma="el" pos="DA0MS0">El</w><w lemma="2" pos="AO0MS0"
+                  ana="#annotation_manuelle" xml:id="cuYMOca">ii°</w><w xml:id="zUjJvcQ" lemma="mal" pos="AQ0CS0">mal</w><w
+                  xml:id="gaEmP7D" lemma="ser" pos="VSIP3S0">es</w><w xml:id="j4o3Mgv" lemma="que" pos="CS">que</w><w
+                  xml:id="vjZQPfH" lemma="en" pos="SPS00">en</w><w xml:id="rCZQ7o2" lemma="el" pos="DA0FS0">la</w><w
+                  xml:id="hXPHgCI" lemma="otro" pos="DI0FS0">otra</w><w pos="NCFS000" ana="#annotation_manuelle" xml:id="hXS0lF7"
+                  lemma="parte">parte</w><pc xml:id="qTHITqw" lemma="," pos="Fc">,</pc><w xml:id="iEzJwKJ" lemma="ser"
+                  pos="VSIC1S0">sería</w><w xml:id="e6ZsA7Z" lemma="estrecho" pos="AQ0FS0">estrecha</w><w xml:id="a7oG8pd"
+                  lemma="e" pos="CC">e</w><w xml:id="rih93xc" lemma="apretar" pos="VMPS0SF">apretada</w><pc xml:id="xuUv050"
+                  lemma="." pos="Fp">.</pc><w xml:id="xBDUDIQ" lemma="et" pos="CC">Et</w><w xml:id="wgTu2Yb" lemma="así" pos="RG"
+                  >así</w><w xml:id="cgGTYeO" lemma="ellos" pos="PP3MP000">ellos</w><w lemma="mismo" pos="AQ0MP0"
+                  ana="#annotation_manuelle" xml:id="ud7fdfc">mesmos</w><w lemma="se" pos="PP3CN000" ana="#annotation_manuelle"
+                  xml:id="njkw1If">se</w><w lemma="embargar" ana="#annotation_manuelle" xml:id="oamrtyQ" pos="VMIC3P0"
+                  >enbargarían</w><w xml:id="stPiXEW" lemma="el" pos="DA0MP0">los</w><w xml:id="i5rnn9R" lemma="uno"
+                  pos="PI0MP000">unos</w><w xml:id="htIjoBa" lemma="a" pos="SPS00">a</w><w xml:id="iiSPjx5" lemma="el"
+                  pos="DA0MP0">los</w><w xml:id="dhozxeJ" lemma="otro" pos="PI0MP000">otros</w><pc xml:id="tb6mFK0" lemma=","
+                  pos="Fc">,</pc><w xml:id="x36JmFl" lemma="que" pos="CS">que</w><w xml:id="gb6dRsC" lemma="no" pos="RN">non</w><w
+                  xml:id="pQQrmoy" lemma="poder" pos="VMIC3P0">podrían</w><w lemma="ferir" ana="#annotation_manuelle"
+                  xml:id="jwg5LME" pos="VMN0000">ferir</w><w xml:id="oKrUnE0" lemma="a" pos="SPS00">a</w><w xml:id="aZC4cNZ"
+                  lemma="el" pos="DA0MP0">los</w><w xml:id="w6miWIN" lemma="enemigo" pos="NCMP000">enemigos</w><pc
+                  xml:id="xEKPsD4" lemma="." pos="Fp">.</pc><w xml:id="ierQWgX" lemma="et" pos="CC">Et</w><w xml:id="jh3PsB0"
+                  lemma="por" pos="SPS00">por</w><w xml:id="czo0NNX" lemma="ende" pos="RG">ende</w><pc xml:id="mbNaEzf" lemma=","
+                  pos="Fc">,</pc><w xml:id="xqNr7Y3" lemma="este" pos="DD0FP0">estas</w><w xml:id="sncMClK" lemma="2" pos="Z"
+                  >dos</w><w xml:id="g1FIwZ0" lemma="cosa" pos="NCFP000">cosas</w><w xml:id="mTOKnIF" lemma="ser" pos="VSIP3P0"
+                  >son</w><w xml:id="iTn7Jo1" lemma="menester" pos="NCMS000">menester</w><w xml:id="zgy3Bof" lemma="en"
+                  pos="SPS00">en</w><w xml:id="h2o67rm" lemma="el" pos="DA0FS0">la</w><w lemma="haz" pos="NCFS000"
+                  ana="#annotation_manuelle" xml:id="qHDQh5U">haz</w><pc xml:id="zgQOXdT" lemma="," pos="Fc">,</pc><w lemma="lo"
+                  ana="#annotation_manuelle" xml:id="nb7Ye1e" pos="DA0NS0">lo</w><w xml:id="bFEFS8K" lemma="uno" pos="PI0MS000"
+                  >uno</w><w xml:id="bQwcUin" lemma="que" pos="PR0CN000">que</w><w xml:id="lkMQVn2" lemma="no" pos="RN">non</w><w
+                  lemma="se" pos="PP3CN000" ana="#annotation_manuelle" xml:id="mhkXjJJ">se</w><w lemma="poder" pos="VMSP3S0"
+                  ana="#annotation_manuelle" xml:id="ytX6gwu">pueda</w><w xml:id="pBGpYDV" lemma="horadar" pos="VMN0000"
+                  >foradar</w><w xml:id="ugbCWVJ" lemma="de" pos="SPS00">de</w><w xml:id="frhaHCY" lemma="el" pos="DA0MP0"
+                  >los</w><w xml:id="vlifLAC" lemma="enemigo" pos="NCMP000">enemigos</w><pc xml:id="tMmKhyU" lemma="," pos="Fc"
+                  >,</pc><w xml:id="vzyMTBC" lemma="e" pos="CC">e</w><w lemma="lo" ana="#annotation_manuelle" xml:id="xEwU48X"
+                  pos="DA0NS0">lo</w><w xml:id="lg7IiPe" lemma="otro" pos="PI0MS000">otro</w><w xml:id="hnKLDuc" lemma="que"
+                  pos="PR0CN000">que</w><w xml:id="eDUOrek" lemma="no" pos="RN">non</w><w lemma="se" pos="PP3CN000"
+                  ana="#annotation_manuelle" xml:id="wpb4nqT">se</w><w lemma="embargar" ana="#annotation_manuelle"
+                  xml:id="aAMNzD1" pos="VMSP3P0">enbarguen</w><w xml:id="nLbOMrf" lemma="en" pos="SPS00">en</w><w lemma="el"
+                  pos="DA0MS0" ana="#annotation_manuelle" xml:id="eH2KzDz">el</w><w lemma="ferir" ana="#annotation_manuelle"
+                  xml:id="irXZCKM" pos="VMN0000">ferir</w><pc xml:id="mUAngaF" lemma=";" pos="Fx">;</pc><w xml:id="eoqfEGo"
+                  lemma="el" pos="DA0FP0">las</w><w xml:id="nRokVOM" lemma="cuál" pos="PT0CP000">quales</w><w xml:id="uVhWpiB"
+                  lemma="cosa" pos="NCFP000">cosas</w><w xml:id="awnTqMP" lemma="no" pos="RN">non</w><w lemma="se" pos="PP3CN000"
+                  ana="#annotation_manuelle" xml:id="uxNCzEc">se</w><w xml:id="pg3EdTr" lemma="poder" pos="VMIP3P0">pueden</w><w
+                  xml:id="i8ymV8b" lemma="bien" pos="RG">bien</w><w xml:id="i226NXC" lemma="guardar" pos="VMN0000">guardar</w><w
+                  lemma="si" pos="CS" ana="#annotation_manuelle" xml:id="nOfpOi0">sy</w><w xml:id="qgbuj0U" lemma="no" pos="RN"
+                  >non</w><w xml:id="cAgwLyI" lemma="ser" pos="VSSF3P0">fueren</w><w xml:id="xxUNWaA" lemma="bien" pos="RG"
+                  >bien</w><w xml:id="wwMbgMC" lemma="ordenado" pos="AQ0MP0">ordenados</w><w xml:id="gR47jrs" lemma="el"
+                  pos="DA0MP0">los</w><w xml:id="mKiIP4l" lemma="lidiador" pos="NCMP000">lidiadores</w><pc xml:id="tnWRIwh"
+                  lemma="," pos="Fc">,</pc><w xml:id="d7qqwn7" lemma="e" pos="CC">e</w><w xml:id="erOJEoN" lemma="poner"
+                  pos="VMPS0PM">puestos</w><w lemma="cada" ana="#annotation_manuelle" xml:id="btm4vmd" pos="DI0CS0">cada</w><w
+                  xml:id="kXCfoIH" lemma="uno" pos="PI0MS000">uno</w><w xml:id="mS9F0Vs" lemma="en" pos="SPS00">en</w><w
+                  xml:id="ofVlLgg" lemma="su" pos="DP3CS0">su</w><w xml:id="iY8Qay6" lemma="orden" pos="NCFS000">orden</w><pc
+                  xml:id="mvT6FvN" lemma="." pos="Fp">.</pc><w xml:id="iUHLQp3" lemma="por" pos="SPS00">Por</w><w xml:id="dB2eBrv"
+                  lemma="ende" pos="RG">ende</w><pc xml:id="r1CcQbQ" lemma="," pos="Fc">,</pc><w xml:id="gwIelOp" lemma="ser"
+                  pos="VSIP3P0">son</w><w xml:id="eJo7p9m" lemma="mucho" pos="DI0FP0">muchas</w><w xml:id="oZj8Kwi" lemma="vez"
+                  pos="NCFP000">vezes</w><w xml:id="nOXtZeS" lemma="de" pos="SPS00">de</w><w xml:id="rLg5Jw5" lemma="traer"
+                  pos="VMN0000">traer</w><w xml:id="sANT6VM" lemma="a" pos="SPS00">a</w><w xml:id="b8WhIkT" lemma="el"
+                  pos="DA0MP0">los</w><w xml:id="g96JHEI" lemma="campo" pos="NCMP000">canpos</w><pc xml:id="ijQ0gta" lemma=","
+                  pos="Fc">,</pc><w xml:id="mmFFovK" lemma="también" pos="RG">tanbién</w><w xml:id="gA9JBcj" lemma="el"
+                  pos="DA0MP0">los</w><w xml:id="pi12rxi" lemma="peón" pos="NCMP000">peones</w><w ana="#annotation_manuelle"
+                  xml:id="zt8Q9jr" lemma="como" pos="CS">como</w><w xml:id="oxCPz2j" lemma="el" pos="DA0MP0">los</w><w
+                  lemma="caballero" pos="NCMP000" ana="#annotation_manuelle" xml:id="toTvUHt">cavalleros</w><pc xml:id="e2qhhWF"
+                  lemma="," pos="Fc">,</pc><w lemma="antes" pos="RG" ana="#annotation_manuelle" xml:id="fCdNu0a">ante</w><w
+                  xml:id="oIdKhZe" lemma="que" pos="CS">que</w><w lemma="venir" pos="VMSP3P0" ana="#annotation_manuelle"
+                  xml:id="sHqDDha">vengan</w><w xml:id="nO8HhJq" lemma="a" pos="SPS00">a</w><w xml:id="dNCYcEz" lemma="el"
+                  pos="DA0FP0">las</w><w lemma="facienda" ana="#annotation_manuelle" xml:id="dI9ybwE" pos="NCFP000"
+                  >faziendas</w><pc xml:id="oVkRQkU" lemma="." pos="Fp">.</pc><w xml:id="cTcbkOX" lemma="et" pos="CC">Et</w><w
+                  xml:id="jJGJgwm" lemma="allí" pos="RG">allí</w><w xml:id="sG5OnGf" lemma="ser" pos="VSIP3P0">son</w><w
+                  xml:id="fOEPVCp" lemma="de" pos="SPS00">de</w><w xml:id="h688bBL" lemma="ayuntar" pos="VMN0000">ayuntar</w><w
+                  xml:id="vGG1gfL" lemma="e" pos="CC">e</w><w xml:id="eeSH5jX" lemma="de" pos="SPS00">de</w><w xml:id="oIWIFBh"
+                  lemma="usar" pos="VMN0000">usar</w><w xml:id="eCw3GOg" lemma="el" pos="DA0FP0">las</w><w xml:id="j9KtPjE"
+                  lemma="arma" pos="NCFP000">armas</w><pc xml:id="i60N1pS" lemma="," pos="Fc">,</pc><w xml:id="nDPBxnU" lemma="e"
+                  pos="CC">e</w><w ana="#annotation_manuelle" xml:id="bHdQJGj" lemma="de" pos="SPS00">de</w><w lemma="como"
+                  pos="PR000000" ana="#annotation_manuelle" xml:id="qh3k7EV">commo</w> vayan ordenadamente<pc xml:id="v97qVaq"
+                  lemma="ir" pos="VMSP3P0">,</pc><w xml:id="vvpYWsd" lemma="así" pos="RG">así</w><w lemma="como" pos="PR000000"
+                  ana="#annotation_manuelle" xml:id="qAZr2jY">commo</w><w lemma="si" pos="CS" ana="#annotation_manuelle"
+                  xml:id="pYMKjL4">si</w><w xml:id="clMzs7f" lemma="haber" pos="VMSI3P0">oviesen</w><w xml:id="zmmpRqG" lemma="de"
+                  pos="SPS00">de</w><w xml:id="tPemyLz" lemma="lidiar" pos="VMN0000">lidiar</w><pc xml:id="cHcFix9" lemma=","
+                  pos="Fc">,</pc><w xml:id="uewFT1w" lemma="e" pos="CC">e</w><w xml:id="whgVq3w" lemma="ser" pos="VSIP3P0"
+                  >son</w><w xml:id="oUh6QU4" lemma="de" pos="SPS00">de</w><w xml:id="qrJavq6" lemma="enseñar" pos="VMN0000"
+                  >enseñar</w><w xml:id="huarmaZ" lemma="por" pos="SPS00">por</w><w xml:id="ft8qHWf" lemma="el" pos="DA0MP0"
+                  >los</w><w xml:id="w17jECq" lemma="caudillo" pos="NCMP000">cabdillos</w><w xml:id="ybT3PMt" lemma="que"
+                  pos="PR0CN000">que</w><w lemma="cada" ana="#annotation_manuelle" xml:id="d7bAI7I" pos="DI0CS0">cada</w><w
+                  xml:id="cW6Y1Y7" lemma="uno" pos="PI0MS000">uno</w><w lemma="tener" pos="VMSP3S0" ana="#annotation_manuelle"
+                  xml:id="bbB5fRt">tenga</w><w xml:id="hLFZriL" lemma="su" pos="DP3CS0">su</w><w xml:id="w53UfZS" lemma="orden"
+                  pos="NCFS000">orden</w><w xml:id="nRRo4AA" lemma="en" pos="SPS00">en</w><w xml:id="gmn5SSI" lemma="el"
+                  pos="DA0FS0">la</w><w lemma="haz" pos="NCFS000" ana="#annotation_manuelle" xml:id="zVnX77C">haz</w><pc
+                  xml:id="vu0cDOb" lemma="." pos="Fp">.</pc><w xml:id="iJTJITA" lemma="et" pos="CC">Et</w><w lemma="si" pos="CS"
+                  ana="#annotation_manuelle" xml:id="oypJnAQ">si</w><w xml:id="xWlYCV2" lemma="lo" pos="PP3FSA00">la</w><w
+                  xml:id="cE58YtO" lemma="no" pos="RN">non</w><w xml:id="wTQSLI6" lemma="tener" pos="VMSF1S0">toviere</w><pc
+                  xml:id="qR6cPdb" lemma="," pos="Fc">,</pc><w xml:id="u2N4YN4" lemma="denostar+le" pos="VMSP3P0+PP3CSD00"
+                  >denuéstenle</w><w xml:id="jytXxvY" lemma="e" pos="CC">e</w><w xml:id="z8nyYc0" lemma="castigar+le"
+                  pos="VMSP3P0+PP3CSD00">castíguenle</w><w xml:id="oL0PZ95" lemma="por" pos="SPS00">por</w><w xml:id="cAQGUQ3"
+                  lemma="ello" pos="PP3NS000">ello</w><pc xml:id="eNyXfsU" lemma="." pos="Fp">.</pc><w xml:id="pFaGFvX" lemma="e"
+                  pos="CC">E</w><w lemma="si" pos="CS" ana="#annotation_manuelle" xml:id="rQPlPb3">si</w><w xml:id="hm1KnzB"
+                  lemma="tan" pos="RG">tan</w><w xml:id="vl5p1Fu" lemma="malo" pos="NCMS000">malo</w><w xml:id="q0WKeuK"
+                  lemma="ser" pos="VSSF1S0">fuere</w><w xml:id="ufbmFmt" lemma="que" pos="PR0CN000">que</w><w xml:id="klYNMwV"
+                  lemma="no" pos="RN">non</w><w xml:id="dXpJBtZ" lemma="guardar" pos="VMSF1S0">guardare</w><w xml:id="oRl2sTw"
+                  lemma="orden" pos="NCFS000">orden</w><w xml:id="rRBEBNw" lemma="en" pos="SPS00">en</w><w xml:id="hWN3sBA"
+                  lemma="el" pos="DA0FS0">la</w><w lemma="haz" pos="NCFS000" ana="#annotation_manuelle" xml:id="yAjPQwJ"
+                  >haz</w><pc xml:id="k4qC72Z" lemma="," pos="Fc">,</pc><w xml:id="nKnMYiK" lemma="echar+lo"
+                  pos="VMSP3P0+PP3CNa00">échenlo</w><w xml:id="nWkTcSm" lemma="de" pos="SPS00">de</w><w xml:id="ujT8hId"
+                  lemma="el" pos="DA0FS0">la</w><w lemma="facienda" ana="#annotation_manuelle" xml:id="wAeoXi6" pos="NCFS000"
+                  >fazienda</w><pc xml:id="wkZaV2r" lemma="," pos="Fc">,</pc><w xml:id="qOuiKzy" lemma="así" pos="RG">así</w><w
+                  lemma="como" pos="CS" ana="#annotation_manuelle" xml:id="m4RliHy">commo</w><w xml:id="zC3I3Md" lemma="aquel"
+                  pos="PD0MS000">aquel</w><w xml:id="t7XzaKy" lemma="que" pos="PR0CN000">que</w><w xml:id="jx5LKeC" lemma="no"
+                  pos="RN">non</w><w xml:id="jJYNAZN" lemma="ser" pos="VSIP3S0">es</w><w xml:id="wx7PSTC" lemma="para" pos="SPS00"
+                  >para</w><w xml:id="sCWQmjW" lemma="él" pos="PP3FS000">ella</w><pc xml:id="wSeIXsJ" lemma="." pos="Fp"
+                >.</pc></p>
               <p n="KzGFWVdgWg">
                 <w xml:id="fcuLdtR" lemma="el" pos="DA0FS0">La</w>
                 <w lemma="2" ana="#annotation_manuelle" xml:id="rF6GeOt" pos="AO0FS0">segunda</w>
