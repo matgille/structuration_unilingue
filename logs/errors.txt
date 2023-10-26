@@ -1,0 +1,257 @@
+
+
+ --- 
+
+New attempt -- 2023-10-26 10:40:13.016662
+Alignment error: division chapitre,17,Sal_J_3_3_17
+Alignment error: division Y0VPL32yoA
+
+ --- 
+
+New attempt -- 2023-10-26 10:44:12.715558
+Alignment error: division chapitre,17,Sal_J_3_3_17
+Alignment error: division Y0VPL32yoA
+Alignment error: division HQMQmGzAsC
+Alignment error: division NXtUQbqCOg
+Alignment error: division zWwCYdrBZP
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:00:51.247267
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:02:28.331415
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:02:49.389086
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:03:15.104179
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:04:09.882280
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:07:31.888582
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:07:52.031418
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:12:24.825678
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:12:37.288416
+Alignment error for target file Mad_A: division chapitre,1,Sal_J_3_3_1
+Alignment error for target file Mad_G: division chapitre,20,Sal_J_3_3_20
+Alignment error for target file Mad_B: division chapitre,17,Sal_J_3_3_17
+Alignment error for target file Esc_Q: division chapitre,17,Sal_J_3_3_17
+Alignment error for target file Mad_G: division Y0VPL32yoA
+Alignment error for target file Phil_U: division Y0VPL32yoA
+Alignment error for target file Sev_R: division Y0VPL32yoA
+Alignment error for target file Sev_R: division hPQrHvlfIV
+Alignment error for target file Sev_R: division EIfATTZuhp
+Alignment error for target file Sev_R: division MSwxAcIOfQ
+Alignment error for target file Sev_R: division XnASmRqzYJ
+Alignment error for target file Sev_R: division EdiCUswDrU
+Alignment error for target file Sev_R: division kCttPyxnos
+Alignment error for target file Sev_R: division IBnqEanuMG
+Alignment error for target file Sev_R: division PpAjyHZeMs
+Alignment error for target file Sev_R: division dQAxsJkDkH
+Alignment error for target file Sev_R: division gkzXEITkHR
+Alignment error for target file Mad_B: division Y0VPL32yoA
+Alignment error for target file Mad_B: division QyJBKYErlD
+Alignment error for target file Esc_Q: division Y0VPL32yoA
+Alignment error for target file Sev_Z: division Y0VPL32yoA
+Alignment error for target file Sev_Z: division dQAxsJkDkH
+Alignment error for target file Phil_U: division zkVvRkxRgC
+Alignment error for target file Esc_Q: division HQMQmGzAsC
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:42:12.588560
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:43:25.173628
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:47:05.858877
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:49:06.348371
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:50:58.061296
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:51:32.401209
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:55:26.383804
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:57:35.179677
+
+
+ --- 
+
+New attempt -- 2023-10-26 11:59:47.550096
+
+
+ --- 
+
+New attempt -- 2023-10-26 12:03:50.408939
+
+
+ --- 
+
+New attempt -- 2023-10-26 12:03:58.092913
+
+
+ --- 
+
+New attempt -- 2023-10-26 12:07:02.995557
+
+
+ --- 
+
+New attempt -- 2023-10-26 12:08:52.140158
+Alignment error for target file Mad_A: division chapitre,1,Sal_J_3_3_1
+
+
+ --- 
+
+New attempt -- 2023-10-26 12:09:21.086967
+Alignment error for target file Mad_A: division chapitre,1,Sal_J_3_3_1
+Alignment error for target file Mad_G: division chapitre,20,Sal_J_3_3_20
+Alignment error for target file Mad_B: division chapitre,17,Sal_J_3_3_17
+Alignment error for target file Esc_Q: division chapitre,17,Sal_J_3_3_17
+Alignment error for target file Mad_G: division Y0VPL32yoA
+Alignment error for target file Phil_U: division Y0VPL32yoA
+Alignment error for target file Sev_R: division Y0VPL32yoA
+Alignment error for target file Sev_R: division hPQrHvlfIV
+Alignment error for target file Sev_R: division EIfATTZuhp
+Alignment error for target file Sev_R: division MSwxAcIOfQ
+Alignment error for target file Sev_R: division XnASmRqzYJ
+Alignment error for target file Sev_R: division EdiCUswDrU
+Alignment error for target file Sev_R: division kCttPyxnos
+Alignment error for target file Sev_R: division IBnqEanuMG
+Alignment error for target file Sev_R: division PpAjyHZeMs
+Alignment error for target file Sev_R: division dQAxsJkDkH
+Alignment error for target file Sev_R: division gkzXEITkHR
+Alignment error for target file Mad_B: division Y0VPL32yoA
+Alignment error for target file Mad_B: division QyJBKYErlD
+Alignment error for target file Esc_Q: division Y0VPL32yoA
+Alignment error for target file Sev_Z: division Y0VPL32yoA
+Alignment error for target file Sev_Z: division dQAxsJkDkH
+
+
+ --- 
+
+New attempt -- 2023-10-26 12:32:21.786996
+Alignment error for target file Phil_U: division zkVvRkxRgC
+Alignment error for target file Esc_Q: division HQMQmGzAsC
+Alignment error for target file Mad_B: division vMNovGxsqW
+Alignment error for target file Esc_Q: division NXtUQbqCOg
+Alignment error for target file Sev_Z: division mFwEnaWanj
+Alignment error for target file Mad_G: division UGdswTtGRz
+Alignment error for target file Esc_Q: division zWwCYdrBZP
+Alignment error for target file Mad_G: division WvLHgtjvKj
+Alignment error for target file Sev_R: division WvLHgtjvKj
+Alignment error for target file Sev_Z: division LxguKFWLsT
+
+
+ --- 
+
+New attempt -- 2023-10-26 12:48:15.199783
+
+
+ --- 
+
+New attempt -- 2023-10-26 12:49:00.584311
+Alignment error for target file Phil_U: division zkVvRkxRgC
+Alignment error for target file Esc_Q: division HQMQmGzAsC
+Alignment error for target file Mad_B: division vMNovGxsqW
+Alignment error for target file Esc_Q: division NXtUQbqCOg
+Alignment error for target file Sev_Z: division mFwEnaWanj
+Alignment error for target file Mad_G: division UGdswTtGRz
+Alignment error for target file Esc_Q: division zWwCYdrBZP
+Alignment error for target file Mad_G: division WvLHgtjvKj
+Alignment error for target file Sev_R: division WvLHgtjvKj
+Alignment error for target file Sev_Z: division LxguKFWLsT
+
+
+ --- 
+
+New attempt -- 2023-10-26 12:54:20.130832
+
+
+ --- 
+
+New attempt -- 2023-10-26 12:54:25.418743
+
+
+ --- 
+
+New attempt -- 2023-10-26 13:03:22.229130
+Alignment error for target file Phil_U: division zkVvRkxRgC
+Alignment error for target file Esc_Q: division HQMQmGzAsC
+Alignment error for target file Mad_B: division vMNovGxsqW
+Alignment error for target file Esc_Q: division NXtUQbqCOg
+Alignment error for target file Sev_Z: division mFwEnaWanj
+Alignment error for target file Mad_G: division UGdswTtGRz
+Alignment error for target file Esc_Q: division zWwCYdrBZP
+Alignment error for target file Mad_G: division WvLHgtjvKj
+Alignment error for target file Sev_R: division WvLHgtjvKj
+Alignment error for target file Sev_Z: division LxguKFWLsT
+
+
+ --- 
+
+New attempt -- 2023-10-26 13:09:59.541097
+Alignment error for target file Mad_G: division ZMWbHAhfXj
+Alignment error for target file Phil_U: division zkVvRkxRgC
+Alignment error for target file Esc_Q: division HQMQmGzAsC
+Alignment error for target file Esc_Q: division kQBGRbilTH
+Alignment error for target file Mad_B: division vMNovGxsqW
+Alignment error for target file Esc_Q: division NXtUQbqCOg
+Alignment error for target file Mad_B: division vKLJuVSTtS
+Alignment error for target file Sev_Z: division mFwEnaWanj
+Alignment error for target file Mad_G: division UGdswTtGRz
+Alignment error for target file Esc_Q: division zWwCYdrBZP
+Alignment error for target file Mad_G: division eoeSWXrdHR
+Alignment error for target file Mad_G: division WvLHgtjvKj
+Alignment error for target file Sev_R: division WvLHgtjvKj
+Alignment error for target file Sev_Z: division FzRbHUZwQs

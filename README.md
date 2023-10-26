@@ -34,6 +34,8 @@ L'outil est une aide à l'alignement et reste peu efficace en cas de gros change
 est efficace en interaction avec l'utilisateur.ice, qui viendra corriger à la main les erreurs ou impasses 
 de l'alignement automatique. Un fichier de log vient indiquer les divisions qui n'ont pu être alignées.
 
+L'outil est ainsi aussi efficace pour repérer les différences structurelles entre témoins.
+
 Il est possible de fonctionner de façon progressive (chapitre par chapitre par exemple), 
 ou par structure (les chapitres, les titres, les sous-chapitres, les paragraphes).
 
