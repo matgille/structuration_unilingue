@@ -134,25 +134,6 @@ class Aligner:
 
         self.target_tokens, self.target_ids, self.tokens_and_ids = dict(), dict(), dict()
 
-        # print("Retrieving tokens for each document")
-        # for basename, target_file in self.dict_of_parsed_files.items():
-        #     print(basename)
-        #     self.target_tokens[basename] = target_file.xpath("descendant::node()[self::tei:w or self::tei:pc]/@lemma",
-        #                                                      namespaces=self.ns_decl)
-        #     self.target_ids[basename] = target_file.xpath("descendant::node()[self::tei:w or self::tei:pc]/@xml:id",
-        #                                                   namespaces=self.ns_decl)
-        #     self.tokens_and_ids[basename] = list(zip(self.target_tokens[basename], self.target_ids[basename]))
-        #
-        # self.words_and_pc = dict()
-        # for basename, target_file in self.output_tree.items():
-        #     self.words_and_pc[basename] = target_file.xpath("descendant::node()[self::tei:pc or self::tei:w]",
-        #                                                     namespaces=self.ns_decl)
-        #
-        # self.all_nodes = dict()
-        # for basename, target_file in self.output_tree.items():
-        #     self.all_nodes[basename] = target_file.xpath("descendant::tei:div[@type='partie']/descendant::node()",
-        #                                                  namespaces=self.ns_decl)
-
     def structure_tree(self, elements: list, ids: list, context, index_context, key):
         elements_and_ids = list(zip(elements, ids))
         print(elements_and_ids)
