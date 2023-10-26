@@ -134,10 +134,9 @@ class Aligner:
 
         self.target_tokens, self.target_ids, self.tokens_and_ids = dict(), dict(), dict()
 
-    def structure_tree(self, elements: list, ids: list, context, index_context, key):
+    def structure_tree(self, elements: list, ids: list, context, index_context, target_id):
         elements_and_ids = list(zip(elements, ids))
-        print(elements_and_ids)
-        context_target_nodes = self.output_tree[key].xpath(context, namespaces=self.ns_decl)[index_context]
+        context_target_nodes = self.output_tree[target_id].xpath(context, namespaces=self.ns_decl)[index_context]
         all_nodes = context_target_nodes.xpath(f"descendant::node()[not(self::text())]", namespaces=self.ns_decl)
         all_ids = context_target_nodes.xpath(
             f"descendant::node()[not(self::text())]/@*[name()='n' or name()='xml:id']", namespaces=self.ns_decl)
@@ -153,7 +152,7 @@ class Aligner:
             # Va savoir pourquoi mais l'argument nsmap ne fonctionne pas ici il faut passer par ce truc moche.
             element_to_insert = ET.Element("{" + self.tei_ns + "}" + element_name)
             for attribute, value in attributes.items():
-                element_to_insert.set(attribute, value)
+                element_to_insert.set(attribute, value.replace(self.source_file_id, target_id))
 
             # On fonctionne différemment pour le premier élément de la liste: dans ce cas il faut chercher
             # le premier token de la structure. Si tel n'est pas le cas, on va chercher le 2e token (car on prévoit
@@ -170,7 +169,7 @@ class Aligner:
             #  On cherche ici les positions (dans le contexte donné) des ancres de début et de fin de division
             # On convertit donc un identifiant en index.
             # On doit toujours mettre à jour notre arbre en parsant à chaque nouvelle boucle
-            context_target_nodes = self.output_tree[key].xpath(context, namespaces=self.ns_decl)[index_context]
+            context_target_nodes = self.output_tree[target_id].xpath(context, namespaces=self.ns_decl)[index_context]
             all_nodes = context_target_nodes.xpath(f"child::node()[not(self::text())]", namespaces=self.ns_decl)
             for idx, node in enumerate(all_nodes):
                 # On commence par chercher le premier mot de la structure
@@ -232,6 +231,7 @@ class Aligner:
             for index_context, (context_source_node, context_target_node) in enumerate(
                     list(zip(context_source_nodes, context_target_nodes))):
                 structure_source_elements = context_source_node.xpath(query, namespaces=self.ns_decl)
+                structure_target_elements = context_target_node.xpath(query, namespaces=self.ns_decl)
 
                 # On ajoute des identifiants aux éléments qui en sont dépourvus
                 unidentified_elements = [element for element in
@@ -266,6 +266,7 @@ class Aligner:
                 source_lemmas_ids = list(zip(source_lemmas, source_ids))
                 target_id_list = [target_ids[0], ]
                 # On itère sur chaque division
+                matching_id = str
                 for index, division in enumerate(structure_source_elements):
 
                     # On a besoin de l'identifiant de fin de la division courante du
@@ -293,8 +294,8 @@ class Aligner:
                     if index == 0:
                         current_target_position = number_of_tokens_in_div
                     else:
-                        current_target_position += number_of_tokens_in_div
-
+                        # On va aller chercher à partir de la dernière position trouvée.
+                        current_target_position = number_of_tokens_in_div + [index for index, (token, ident) in enumerate(target_tokens_ids) if ident == matching_id][0]
                     # On va aller collationner le texte dans une fenêtre où l'on estime que la division termine
                     # En fonction de la variabilité de la division en question on choisira une text_proportion différente
                     tokens_fraction = round(number_of_tokens_in_div * text_proportion)
@@ -303,7 +304,9 @@ class Aligner:
 
                     target_search_range = [max(0, current_target_position - tokens_fraction),
                                            current_target_position + tokens_fraction]
-                    print(current_target_position)
+                    print(f"Division {index + 1}")
+                    print(f"Last matching id: {matching_id}")
+                    print(f"Current target position: {current_target_position}")
                     print(f"Source search range: {source_search_range}")
                     print(f"Target search range: {target_search_range}")
                     source_tokens_to_compare = source_lemmas_ids[source_search_range[0]: source_search_range[1]]
@@ -328,27 +331,18 @@ class Aligner:
                     except AssertionError:
                         print(f"Error with query {query} and context {context}")
                         print(traceback.format_exc())
-                        print(f"Collatex dict: {collatex_dict}")
-                        continue
                     except KeyError:
                         print(f"Error with query {query} and context {context}")
                         print(traceback.format_exc())
-                        continue
                     try:
                         # Ici on va regarder si le résultat de la collation correspond à un alignement effectif.
                         # Le cas échéant, on récupère l'identifiant du token qui fait borne.
                         match, matching_id = check_if_match(json_table=collation_table,
                                                             target_id=last_token_current_div)
                         print(f"Div {index + 1} aligned.")
-                        print(matching_id)
-                        current_target_id = \
-                            [id for (token, id) in target_tokens_ids if id == matching_id][0]
-                        print(current_target_id)
-                        print(f"Current position: {current_target_position}")
                         # On nourrit ici une liste de couples d'identifiants qui va correspondre à la position
                         # des divisions à créer.
-                        target_id_list.append(current_target_id)
-
+                        target_id_list.append(matching_id)
                     except Exception:
                         # L'erreur d'alignement mène logiquement à la fin du travail sur le contexte en cours
                         # (on passe au chapitre suivant en cas de travail sur les paragraphes par exemple)
@@ -356,13 +350,12 @@ class Aligner:
                         print(traceback.format_exc())
                         print(last_token_current_div)
                         print(f"Unable to align div {index + 1}. Please check structure in source document.")
-                        division_attributes = division.attrib
                         write_log(
                             f"Alignment error for target file {target_document}.")
                         try:
                             unparsed_divs = structure_source_elements[index:len(structure_source_elements)]
-                            unparsed_ids = [division.xpath("@*")[0] for division in unparsed_divs]
-                            message = f"Divisions {', '.join(unparsed_ids)} will not appear in the final document."
+                            unparsed_ids = [division.xpath("@n")[0] if len(division.xpath("@n")) > 0 else division.xpath("@xml:id")[0] for division in unparsed_divs]
+                            message = f"Divisions {', '.join(unparsed_ids)} will not appear in the final document leaving the tokens unstructured."
                             write_log(message)
                         except Exception:
                             print(traceback.format_exc())
@@ -376,14 +369,15 @@ class Aligner:
                 try:
                     self.structure_tree(elements=structure_source_elements,
                                         ids=target_id_list, context=context,
-                                        index_context=index_context, key=target_document)
+                                        index_context=index_context, target_id=target_document)
                 except Exception:
                     traceback.print_exc()
                     exit(0)
 
                 # On écrit l'arbre dans le fichier xml correspondant.
-                write_tree(f"/home/mgl/Documents/test/out/{target_document}{self.output_file_prefix}.xml",
+                write_tree(f"/home/mgl/Bureau/Travail/projets/alignement/alignement_global_unilingue/data/results/{target_document}{self.output_file_prefix}.xml",
                             self.output_tree[target_document])
+
 
 
 if __name__ == '__main__':
@@ -397,14 +391,16 @@ if __name__ == '__main__':
     example_query_2 = "descendant::node()[self::tei:head or self::tei:div]"
 
     aligner = Aligner(
-        target_path="/home/mgl/Documents/test/out/*.xml",
+        target_path="/home/mgl/Bureau/Travail/projets/alignement/alignement_global_unilingue/data/files_no_structure"
+                    "/*.xml",
         source_file="/home/mgl/Bureau/Travail/projets/alignement/alignement_global_unilingue/data/Source"
                     "/Sal_J.xml",
-        output_files_prefix=".paragraphs")
+        output_files_prefix="")
     # /home/mgl/Bureau/Travail/projets/alignement/alignement_global_unilingue/data/result/
-    # aligner.align(query=example_query_1, context=context_query_1, text_proportion=.20)
-    # Le titre est plus variable et plus court, il est donc utile d'augmenter la fenêtre de comparaison à 1 voire 2 fois la taille de la division
-    # aligner.align(query=example_query_2, context=context_query_2, text_proportion=.5)
+    aligner.align(query=example_query_1, context=context_query_1, text_proportion=.20)
+    # Le titre est plus variable et plus court, il est donc utile d'augmenter la fenêtre de comparaison à 1 voire 2
+    # fois la taille de la division
+    aligner.align(query=example_query_2, context=context_query_2, text_proportion=1)
     # exit(0)
 
     for n in range(1, 24):
