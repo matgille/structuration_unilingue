@@ -13,7 +13,7 @@
                 <xsl:text>.xml</xsl:text>
             </xsl:variable>
             <xsl:result-document
-                href="/home/mgl/Bureau/Travail/projets/alignement/alignement_global_unilingue/data/transform/{$output_path}">
+                href="/home/mgl/Bureau/Travail/projets/alignement/alignement_global_unilingue/data/files_no_structure/{$output_path}">
                 <xsl:apply-templates/>
             </xsl:result-document>
         </xsl:for-each>

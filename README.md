@@ -5,6 +5,7 @@ L'outil qui est présenté ici vise à répondre à un problème simple: la coll
 bien explorée par la recherche, mais quid de la collation macroscopique ? Comment aligner automatiquement de façon globale des textes
 *similaires* (*id est*, que l'on peut collationer), en utilisant la TEI
 
+Une partie du script est inspirée du travail de Lucence Ing et de ses scripts de collation. 
 ## Ce que n'est pas l'outil
 Un aligneur de versions linguistiques différentes ou de textes semblables mais non similaires (*id est* des textes non collationables)
 

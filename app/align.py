@@ -359,7 +359,6 @@ class Aligner:
                             write_log(message)
                         except Exception:
                             print(traceback.format_exc())
-                            exit(0)
                         break
 
                 target_id_list = [(target_id_list[index], target_id_list[index + 1]) for index, _
@@ -374,9 +373,9 @@ class Aligner:
                     traceback.print_exc()
                     exit(0)
 
-                # On écrit l'arbre dans le fichier xml correspondant.
-                write_tree(f"/home/mgl/Bureau/Travail/projets/alignement/alignement_global_unilingue/data/results/{target_document}{self.output_file_prefix}.xml",
-                            self.output_tree[target_document])
+            # On écrit l'arbre dans le fichier xml correspondant.
+            write_tree(f"/home/mgl/Bureau/Travail/projets/alignement/alignement_global_unilingue/data/results/{target_document}{self.output_file_prefix}.xml",
+                        self.output_tree[target_document])
 
 
 
