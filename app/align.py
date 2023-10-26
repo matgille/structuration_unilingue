@@ -1,18 +1,14 @@
 import copy
 import glob
 import json
+import os
 import random
 import string
 import traceback
 import datetime
-
 import collatex
-
 import lxml.etree as ET
 
-
-# L'ordre es différents alignements est manuel. Voyons un cas précis
-# Dans Z on a toute la partie 3. C'est sur quoi on va travailler.
 
 def test_file_writing(object, name, format):
     with open(f"/home/mgl/Documents/{name}", "w") as output_file:
@@ -26,6 +22,10 @@ def generateur_id(size=6, chars=string.ascii_uppercase + string.ascii_lowercase 
 
 
 def log_stamp():
+    if os.path.isdir("logs"):
+        pass
+    else:
+        os.makedirs("logs")
     with open("logs/errors.txt", "a") as log_file:
         log_file.write("\n\n --- \n\n")
         log_file.write(f"New attempt -- {datetime.datetime.now()}")
@@ -358,7 +358,15 @@ class Aligner:
                         print(f"Unable to align div {index + 1}. Please check structure in source document.")
                         division_attributes = division.attrib
                         write_log(
-                            f"Alignment error for target file {target_document}: division {','.join(attribute for attribute in division_attributes.values())}")
+                            f"Alignment error for target file {target_document}.")
+                        try:
+                            unparsed_divs = structure_source_elements[index:len(structure_source_elements)]
+                            unparsed_ids = [division.xpath("@*")[0] for division in unparsed_divs]
+                            message = f"Divisions {', '.join(unparsed_ids)} will not appear in the final document."
+                            write_log(message)
+                        except Exception:
+                            print(traceback.format_exc())
+                            exit(0)
                         break
 
                 target_id_list = [(target_id_list[index], target_id_list[index + 1]) for index, _
