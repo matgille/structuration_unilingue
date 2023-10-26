@@ -11,46 +11,38 @@ Un aligneur de versions linguistiques différentes ou de textes semblables mais 
 ## Idées
 
 - le but de l'outil est de structurer *n* textes à partir d'un texte modèle encodé en XML-TEI
-- on fera usage d'un aligneur existant comme CollateX
-- il y a un problème dans CollateX à aligner des séquences longues. Voir si cela suppose de changer d'aligneur.
-  
+
 
 ### Fonctionnement précis
 
 #### Pré-requis
 - on peut poser que la complexité du corpus est faible: on s'attend à ce que tous les textes soient relativement similaires 
-  au niveau macro.   
+  au niveau macro: cas d'une partie des corpus à éditer. L'outil ne peut en l'état reconnaître des déplacements
+  de texte importants.
   
 #### Formats
-Le document base est structuré en XML-TEI, donc déjà divisé. 
+
+Le document base à partir duquel structurer les autres documents est structuré en XML-TEI. Les documents doivent être tokénisés et lemmatisés. 
 
 
-#### Structure
+#### xPath
 
-On va travailler selon la structure du document source. 
-Quel ordre ? Faire peu à peu ou en changeant la granularité niveau par niveau ?
-Laisser la possibilité à l'utilisateur, en faisant des tests
+La structure à aligner est indiquée à l'aide de requêtes XPATH: une requête qui permet de proposer un contexte (une partie par exemple), 
+et une requête qui va chercher la structure précise (un titre, un paragraphe, une sous-partie).
 
+L'outil est une aide à l'alignement et reste peu efficace en cas de gros changement structurel. Il
+est efficace en interaction avec l'utilisateur.ice, qui viendra corriger à la main les erreurs ou impasses 
+de l'alignement automatique. Un fichier de log vient indiquer les divisions qui n'ont pu être alignées.
 
-## Besoins
-La tokénisation et la lemmatisation du corpus est un plus.
+Il est possible de fonctionner de façon progressive (chapitre par chapitre par exemple), 
+ou par structure (les chapitres, les titres, les sous-chapitres, les paragraphes).
 
-
-## Premières idées
-
-- On peut commencer par imaginer faire des divisions arbitraires 
-  en utilisant des comptages de mots. on va prendre la longueur en mot de la division-base à retrouver; puis on va lui ajouter 10 ou 20%; et on va 
-  pré-découper le texte cible. Il faudra ensuite aligner le début et la fin du texte? le texte entier?
-  
 
 ## Fonctionnement
 1) Structuration en XML-TEI d'un texte
 2) Structuration minimale des autres textes (teiHeader, text, pb, lb, rubriques si récupéré automatiquement) OU récupération en texte brut
 3) Tokénisation et lemmatisation
-4) Récupération des pré-échantillons
+4) Récupération des pré-échantillons (estimation de la fin d'une division)
 5) Alignement sur les pré-échantillons (début, fin de chaîne?) et re-calcul au besoin
 
-## Corpus du test
 
-Travailler sur le Regimiento et les textes déjà structurés ? A et Z
-Valider avec Ayala pour voir sur des textes pas structurés ?
