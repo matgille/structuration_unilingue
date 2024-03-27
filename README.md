@@ -1,9 +1,9 @@
-# Aligneur unilingue
+# Alignement/structuration macroscopique de sources unilingue
 
 ## Ce qu'est l'outil
 L'outil qui est présenté ici vise à répondre à un problème simple: la collation microscropique est 
-bien explorée par la recherche, mais quid de la collation macroscopique ? Comment aligner automatiquement de façon globale des textes
-*similaires* (*id est*, que l'on peut collationer), en utilisant la TEI
+bien explorée par la recherche, mais *quid* de la collation macroscopique ? Comment aligner automatiquement de façon globale des textes
+*similaires* (*id est*, que l'on **peut** collationer), à partir d'un modèle structuré en TEI?
 
 Une partie du script est inspirée du travail de Lucence Ing et de ses scripts de collation. 
 ## Ce que n'est pas l'outil
@@ -46,6 +46,6 @@ ou par structure (les chapitres, les titres, les sous-chapitres, les paragraphes
 2) Structuration minimale des autres textes (teiHeader, text, pb, lb, rubriques si récupéré automatiquement) OU récupération en texte brut
 3) Tokénisation et lemmatisation
 4) Récupération des pré-échantillons (estimation de la fin d'une division)
-5) Alignement sur les pré-échantillons (début, fin de chaîne?) et re-calcul au besoin
+5) Alignement sur les pré-échantillons (début, fin de chaîne?)
 
 
